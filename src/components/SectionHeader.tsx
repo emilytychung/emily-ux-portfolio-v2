@@ -1,17 +1,17 @@
 import { type FC } from 'react'
 import cn from '@/lib/utils/cn'
+import { SectionHeaderMap } from '@/lib/constants/sections'
 
 export interface SectionHeaderProps {
   className?: string
-  labelText: string
-  headingText: string
+  sectionHeaderMap: SectionHeaderMap
 }
 
 export const SectionHeader: FC<SectionHeaderProps> = ({
   className,
-  labelText,
-  headingText,
+  sectionHeaderMap,
 }) => {
+  const { labelText, headingText } = sectionHeaderMap
   return (
     <div
       className={cn(
