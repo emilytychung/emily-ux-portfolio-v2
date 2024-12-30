@@ -6,12 +6,10 @@ export const hauora = localFont({
     {
       path: '../../public/fonts/Hauora-Regular.woff2',
       weight: '400',
-      style: 'normal',
     },
     {
       path: '../../public/fonts/Hauora-SemiBold.woff2',
       weight: '600',
-      style: 'normal',
     },
   ],
   variable: '--font-hauora',

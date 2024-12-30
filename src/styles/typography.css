@@ -1,0 +1,28 @@
+@tailwind components;
+
+@layer components {
+  /* Label Text - Mono */
+  .text-label {
+    @apply font-geist text-sm uppercase leading-[170%] tracking-wide sm:text-base sm:leading-[200%];
+  }
+
+  /* Body Text */
+  .text-body {
+    @apply font-hauora text-base leading-[150%];
+  }
+
+  /* Small Headings */
+  .text-heading-small {
+    @apply font-hauora text-lg font-semibold leading-[130%] tracking-tight sm:text-2xl;
+  }
+
+  /* Medium Headings */
+  .text-heading-medium {
+    @apply font-hauora text-xl font-semibold leading-[150%] tracking-tight sm:text-4xl;
+  }
+
+  /* Large Headings */
+  .text-heading-large {
+    @apply font-hauora text-xl font-semibold leading-[150%] tracking-tight sm:text-4xl lg:text-5xl;
+  }
+}

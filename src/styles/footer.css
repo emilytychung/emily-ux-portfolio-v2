@@ -1,0 +1,14 @@
+.text-footer-title {
+  @apply font-geist text-sm uppercase leading-[170%] tracking-wide text-white sm:text-base sm:leading-[200%];
+}
+
+.text-footer-email {
+  @apply font-hauora font-bold tracking-tight;
+  font-size: 24px;
+  line-height: 150%;
+  @apply sm:text-3xl;
+}
+
+.text-footer-copyright {
+  @apply font-geist text-sm uppercase leading-4 tracking-wide;
+}
