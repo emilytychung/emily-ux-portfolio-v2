@@ -1,6 +1,6 @@
 import { type FC } from 'react'
 import cn from '@/lib/utils/cn'
-import { SectionHeaderMap } from '@/lib/constants/sections'
+import { SectionHeaderMap } from '@/constants/sections'
 
 export interface SectionHeaderProps {
   className?: string

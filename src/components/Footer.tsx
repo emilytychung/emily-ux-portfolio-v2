@@ -1,5 +1,5 @@
 import { Button } from '@/components/Button'
-import { EMAIL } from '@/lib/constants/contact'
+import { EMAIL } from '@/constants/contact'
 
 export function Footer() {
   return (

@@ -1,5 +1,5 @@
 import { hauora, mono } from '@/lib/fonts'
-import SEO_METADATA from '@/lib/constants/seo-metadata'
+import SEO_METADATA from '@/constants/seo-metadata'
 import { Footer } from '@/components/Footer'
 import '@/styles/globals.css'
 import '@/styles/typography.css'
