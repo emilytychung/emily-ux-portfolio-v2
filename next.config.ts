@@ -1,7 +1,11 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
-  /* config options here */
-};
+  images: {
+    // For local SVGs and images
+    dangerouslyAllowSVG: true,
+    contentDispositionType: 'attachment',
+  },
+}
 
-export default nextConfig;
+export default nextConfig

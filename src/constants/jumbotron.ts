@@ -27,25 +27,41 @@ export const JUMBOTRON_CONTENT = {
   projectsLabel: '50+ PROJECTS INCLUDING',
 } as const
 
-export const LOGO_DATA = [
+type LogoData = {
+  name: string
+  src: string
+  alt: string
+  width: number
+  height: number
+}
+
+export const LOGO_DATA: LogoData[] = [
   {
     name: 'TD',
-    src: '/logo/td.svg',
+    src: '/images/logo/td.svg',
     alt: 'TD Canada Trust Logo',
+    width: 145,
+    height: 26,
   },
   {
     name: 'Solana',
-    src: '/logo/solana.svg',
+    src: '/images/logo/solana.svg',
     alt: 'Solana Logo',
+    width: 120,
+    height: 30,
   },
   {
     name: 'Uniswap',
-    src: '/logo/uniswap.svg',
+    src: '/images/logo/uniswap.svg',
     alt: 'Uniswap Logo',
+    width: 115,
+    height: 24,
   },
   {
     name: 'Pizza Pizza',
-    src: '/logo/pizza-pizza.svg',
+    src: '/images/logo/pizza-pizza.svg',
     alt: 'Pizza Pizza Logo',
+    width: 118,
+    height: 19,
   },
 ] as const
