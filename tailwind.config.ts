@@ -16,6 +16,7 @@ export default {
       fontFamily: {
         hauora: ['var(--font-hauora)'],
         geist: ['var(--font-geist-mono)'],
+        inter: ['var(--font-inter)'],
         awesome: ['Font Awesome 6 Pro'],
       },
       fontSize: {

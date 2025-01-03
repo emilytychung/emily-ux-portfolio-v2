@@ -1,5 +1,5 @@
 import localFont from 'next/font/local'
-import { Geist_Mono } from 'next/font/google'
+import { Geist_Mono, Inter } from 'next/font/google'
 
 export const hauora = localFont({
   src: [
@@ -18,4 +18,9 @@ export const hauora = localFont({
 export const mono = Geist_Mono({
   subsets: ['latin'],
   variable: '--font-geist-mono',
+})
+
+export const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
 })
