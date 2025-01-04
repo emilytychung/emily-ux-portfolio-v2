@@ -6,11 +6,10 @@ export interface SectionHeaderProps {
   className?: string
   sectionHeaderMap: SectionHeaderMap
 }
-
-export const SectionHeader: FC<SectionHeaderProps> = ({
+export default function SectionHeader({
   className,
   sectionHeaderMap,
-}) => {
+}: SectionHeaderProps) {
   const { labelText, headingText } = sectionHeaderMap
   return (
     <div

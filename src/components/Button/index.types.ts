@@ -1,4 +1,3 @@
-// components/Button/Button.types.ts
 export type ButtonVariant = 'primary' | 'secondary'
 
 export interface ButtonProps

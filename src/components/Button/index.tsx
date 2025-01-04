@@ -1,7 +1,7 @@
 import { ButtonProps } from './index.types'
 import cn from '@/lib/utils/cn'
 
-export const Button = ({
+export default function Button({
   variant = 'primary',
   size = 'md',
   fullWidth,
@@ -12,7 +12,7 @@ export const Button = ({
   children,
   className,
   ...props
-}: ButtonProps) => {
+}: ButtonProps) {
   const baseStyles = cn(
     'flex items-center justify-center gap-2 rounded-full font-hauora font-bold text-center tracking-[-0.02em] transition-all',
     fullWidth && 'w-full'

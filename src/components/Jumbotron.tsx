@@ -2,7 +2,7 @@ import Image from 'next/image'
 import cn from '@/lib/utils/cn'
 import { JUMBOTRON_CONTENT, LOGO_DATA } from '@/constants/jumbotron'
 
-export const Jumbotron = () => {
+export default function Jumbotron() {
   const renderTagline = () => (
     <>
       <span className="text-blue-primary">{JUMBOTRON_CONTENT.role}</span>{' '}

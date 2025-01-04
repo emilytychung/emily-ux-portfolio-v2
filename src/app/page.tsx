@@ -1,5 +1,6 @@
-import { Jumbotron } from '@/components/Jumbotron'
-import { SectionHeader } from '@/components/SectionHeader'
+import Jumbotron from '@/components/Jumbotron'
+import SectionHeader from '@/components/SectionHeader'
+import Testimonials from '@/components/Testimonials'
 import { SECTION_HEADERS } from '@/constants/sections'
 
 export default function Home() {
@@ -8,7 +9,7 @@ export default function Home() {
       <Jumbotron />
       <SectionHeader sectionHeaderMap={SECTION_HEADERS.caseStudies} />
       <SectionHeader sectionHeaderMap={SECTION_HEADERS.gallery} />
-      <SectionHeader sectionHeaderMap={SECTION_HEADERS.testimonials} />
+      <Testimonials />
       <SectionHeader sectionHeaderMap={SECTION_HEADERS.personal} />
     </div>
   )

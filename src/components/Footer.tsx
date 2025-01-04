@@ -1,7 +1,7 @@
-import { Button } from '@/components/Button'
+import Button from '@/components/Button'
 import { EMAIL } from '@/constants/contact'
 
-export function Footer() {
+export default function Footer() {
   return (
     <footer className="flex flex-col">
       <div className="flex flex-col items-center bg-blue-primary px-4 py-8 sm:px-16 sm:py-16 md:px-[218px]">
