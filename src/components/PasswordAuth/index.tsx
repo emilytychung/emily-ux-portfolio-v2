@@ -65,7 +65,10 @@ export default function PasswordAuth() {
             to get access.
           </p>
         </div>
-        <form onSubmit={handleSubmit}>
+        <form
+          onSubmit={handleSubmit}
+          className="flex flex-col gap-[15px] sm:gap-4"
+        >
           <PasswordInput
             value={password}
             onChange={handleChange}
