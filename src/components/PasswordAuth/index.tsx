@@ -28,17 +28,20 @@ export default function PasswordAuth() {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
+    setIsSubmitting(true)
     setError('')
 
     const { isAuthSetup, error } = validateAuthentication()
     console.log({ isAuthSetup })
     if (!isAuthSetup) {
+      setIsSubmitting(false)
       setError(error)
       return
     }
 
     const isValid = validateAndLogin(password)
     if (!isValid) {
+      setIsSubmitting(false)
       setError('Incorrect password')
       setPassword('')
     }
@@ -62,19 +65,20 @@ export default function PasswordAuth() {
             to get access.
           </p>
         </div>
-        <PasswordInput
-          value={password}
-          onChange={handleChange}
-          error={error}
-          disabled={isSubmitting}
-        />
-        <Button
-          fullWidth
-          disabled={!password || isSubmitting}
-          onClick={handleSubmit}
+        <form
+          onSubmit={handleSubmit}
+          className="flex flex-col gap-[15px] sm:gap-4"
         >
-          {isSubmitting ? 'Submitting...' : 'Submit'}
-        </Button>
+          <PasswordInput
+            value={password}
+            onChange={handleChange}
+            error={error}
+            disabled={isSubmitting}
+          />
+          <Button type="submit" fullWidth disabled={!password || isSubmitting}>
+            {isSubmitting ? 'Submitting...' : 'Submit'}
+          </Button>
+        </form>
       </div>
     </Container>
   )
