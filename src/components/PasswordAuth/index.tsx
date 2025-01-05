@@ -7,16 +7,17 @@ import PasswordInput from './PasswordInput'
 import { useState } from 'react'
 import LockIcon from './LockIcon'
 import { useEnvValidation } from '@/lib/hooks/useEnvValidation'
+import { useAuth } from '@/lib/hooks/useAuth'
 
 // Access environment variable
 const CORRECT_PASSWORD = process.env.NEXT_PUBLIC_SITE_PASSWORD
 
 export default function PasswordAuth() {
+  const { validateAuthentication, validateAndLogin } = useAuth()
   const [password, setPassword] = useState('')
   const [error, setError] = useState<string>()
   const [isSubmitting, setIsSubmitting] = useState(false)
-  const { isValid, error: envError, sitePassword } = useEnvValidation()
-  console.log({ isValid, error, sitePassword })
+
   const handleChange = (value: string) => {
     setPassword(value)
     if (!value) {
@@ -25,23 +26,21 @@ export default function PasswordAuth() {
     }
   }
 
-  const handleSubmit = async () => {
-    if (!isValid || !sitePassword) {
-      setError(envError || 'Authentication not properly configured')
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    setError('')
+
+    const { isAuthSetup, error } = validateAuthentication()
+    console.log({ isAuthSetup })
+    if (!isAuthSetup) {
+      setError(error)
       return
     }
-    setIsSubmitting(true)
-    try {
-      if (password !== sitePassword) {
-        setError('Incorrect password')
-        return
-      }
-      setError(undefined)
-      // Add redirect logic here
-    } catch (err) {
-      setError('Something went wrong. Please try again.')
-    } finally {
-      setIsSubmitting(false)
+
+    const isValid = validateAndLogin(password)
+    if (!isValid) {
+      setError('Incorrect password')
+      setPassword('')
     }
   }
 

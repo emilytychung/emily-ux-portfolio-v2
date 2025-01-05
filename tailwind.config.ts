@@ -56,6 +56,15 @@ export default {
       boxShadow: {
         text: '0px 2px 0px rgba(0, 0, 0, 0.15)',
       },
+      animation: {
+        spin: 'spin 1s linear infinite',
+      },
+      keyframes: {
+        spin: {
+          '0%': { transform: 'rotate(0deg)' },
+          '100%': { transform: 'rotate(360deg)' },
+        },
+      },
     },
   },
   plugins: [],

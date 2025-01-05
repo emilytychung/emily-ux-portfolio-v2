@@ -1,18 +1,17 @@
-// hooks/useEnvValidation.ts
 import { useState, useEffect } from 'react'
 import env from '@/lib/utils/env'
 
 interface EnvValidationResult {
-  isValid: boolean
-  error: string | null
+  isEnvValid: boolean
+  error: string | undefined
   sitePassword: string | null
 }
 
 export function useEnvValidation(): EnvValidationResult {
   const [validationResult, setValidationResult] = useState<EnvValidationResult>(
     {
-      isValid: false,
-      error: null,
+      isEnvValid: false,
+      error: undefined,
       sitePassword: null,
     }
   )
@@ -20,7 +19,7 @@ export function useEnvValidation(): EnvValidationResult {
   useEffect(() => {
     if (!env.sitePassword) {
       setValidationResult({
-        isValid: false,
+        isEnvValid: false,
         error: 'Authentication not properly configured',
         sitePassword: null,
       })
@@ -28,8 +27,8 @@ export function useEnvValidation(): EnvValidationResult {
     }
 
     setValidationResult({
-      isValid: true,
-      error: null,
+      isEnvValid: true,
+      error: undefined,
       sitePassword: env.sitePassword,
     })
   }, [])

@@ -1,4 +1,3 @@
-// components/PasswordInput/PasswordInput.tsx
 import cn from '@/lib/utils/cn'
 import ErrorIcon from './ErrorIcon'
 

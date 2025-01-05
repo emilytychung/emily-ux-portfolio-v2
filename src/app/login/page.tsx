@@ -1,7 +1,7 @@
 import PasswordAuth from '@/components/PasswordAuth'
 import Footer from '@/components/Footer'
 
-export default function PasswordPage() {
+export default function Login() {
   return (
     <>
       <PasswordAuth />
