@@ -17,9 +17,7 @@ export default function RootLayout({
       lang="en"
       className={`${hauora.variable} ${mono.variable} ${inter.variable}`}
     >
-      <body className="font-hauora">
-        {children} <Footer />
-      </body>
+      <body className="font-hauora">{children}</body>
     </html>
   )
 }
