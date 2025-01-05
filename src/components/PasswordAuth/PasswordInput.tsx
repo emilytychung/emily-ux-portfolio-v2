@@ -8,6 +8,7 @@ interface PasswordInputProps {
   error?: string
   id?: string
   name?: string
+  disabled?: boolean
 }
 
 export default function PasswordInput({
@@ -16,6 +17,7 @@ export default function PasswordInput({
   error,
   id = 'password',
   name = 'password',
+  disabled = false,
 }: PasswordInputProps) {
   const inputWrapperClasses = cn(
     // Base styles
@@ -50,6 +52,7 @@ export default function PasswordInput({
           name={name}
           value={value}
           onChange={(e) => onChange(e.target.value)}
+          disabled={disabled}
           className={inputClasses}
           aria-invalid={!!error}
           aria-describedby={error ? `${id}-error` : undefined}

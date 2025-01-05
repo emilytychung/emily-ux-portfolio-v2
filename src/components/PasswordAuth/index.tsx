@@ -6,18 +6,42 @@ import Button from '@/components/Button'
 import PasswordInput from './PasswordInput'
 import { useState } from 'react'
 import LockIcon from './LockIcon'
+import { useEnvValidation } from '@/lib/hooks/useEnvValidation'
+
+// Access environment variable
+const CORRECT_PASSWORD = process.env.NEXT_PUBLIC_SITE_PASSWORD
 
 export default function PasswordAuth() {
   const [password, setPassword] = useState('')
   const [error, setError] = useState<string>()
-
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const { isValid, error: envError, sitePassword } = useEnvValidation()
+  console.log({ isValid, error, sitePassword })
   const handleChange = (value: string) => {
     setPassword(value)
-    // Example validation
-    if (value.length < 8) {
-      setError('Password must be at least 8 characters')
-    } else {
+    if (!value) {
       setError(undefined)
+      return
+    }
+  }
+
+  const handleSubmit = async () => {
+    if (!isValid || !sitePassword) {
+      setError(envError || 'Authentication not properly configured')
+      return
+    }
+    setIsSubmitting(true)
+    try {
+      if (password !== sitePassword) {
+        setError('Incorrect password')
+        return
+      }
+      setError(undefined)
+      // Add redirect logic here
+    } catch (err) {
+      setError('Something went wrong. Please try again.')
+    } finally {
+      setIsSubmitting(false)
     }
   }
 
@@ -39,8 +63,19 @@ export default function PasswordAuth() {
             to get access.
           </p>
         </div>
-        <PasswordInput value={password} onChange={handleChange} error={error} />
-        <Button fullWidth>Submit</Button>
+        <PasswordInput
+          value={password}
+          onChange={handleChange}
+          error={error}
+          disabled={isSubmitting}
+        />
+        <Button
+          fullWidth
+          disabled={!password || isSubmitting}
+          onClick={handleSubmit}
+        >
+          {isSubmitting ? 'Submitting...' : 'Submit'}
+        </Button>
       </div>
     </Container>
   )
