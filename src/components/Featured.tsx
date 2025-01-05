@@ -2,14 +2,14 @@ import Container from '@/components/Container'
 import SectionHeader from '@/components/SectionHeader'
 import { SECTION_HEADERS } from '@/constants/sections'
 import PortfolioCard from './PortfolioCard'
-import { CASE_STUDIES } from '@/constants/case-studies'
+import { FEATURED } from '@/constants/featured'
 
-export default function CaseStudies() {
+export default function Featured() {
   return (
     <Container as="section">
       <SectionHeader sectionHeaderMap={SECTION_HEADERS.caseStudies} />
       <div className="flex flex-col gap-6">
-        {CASE_STUDIES.map(({ company, title, description, tags }) => (
+        {FEATURED.map(({ company, title, description, tags }) => (
           <PortfolioCard
             key={company}
             company={company}

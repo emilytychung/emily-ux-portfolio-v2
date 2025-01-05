@@ -1,5 +1,5 @@
 import cn from '@/lib/utils/cn'
-import { type BaseCaseStudy } from '@/constants/case-studies'
+import { type BaseCaseStudy } from '@/constants/featured'
 import { getPlatformDisplay } from '@/constants/platforms'
 import { textStyles } from './styles'
 

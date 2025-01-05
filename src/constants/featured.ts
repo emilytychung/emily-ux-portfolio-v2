@@ -28,7 +28,7 @@ interface MobileTrioLayout {
 export type CaseStudy = BaseCaseStudy &
   (DesktopOnlyLayout | DesktopMobileLayout | MobileTrioLayout)
 
-export const CASE_STUDIES: CaseStudy[] = [
+export const FEATURED: CaseStudy[] = [
   {
     company: 'TD Canada Trust',
     title: 'Global Transfers Case Study',
@@ -61,4 +61,4 @@ export const CASE_STUDIES: CaseStudy[] = [
   },
 ] as const
 
-export type CaseStudyData = (typeof CASE_STUDIES)[number]
+export type CaseStudyData = (typeof FEATURED)[number]
