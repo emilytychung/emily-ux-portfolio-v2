@@ -16,6 +16,7 @@ export default function CaseStudies() {
             title={title}
             description={description}
             tags={tags}
+            section="featured"
           />
         ))}
       </div>

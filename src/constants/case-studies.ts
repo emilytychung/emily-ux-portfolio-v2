@@ -12,7 +12,6 @@ export type BaseCaseStudy = {
 interface DesktopOnlyLayout {
   layout: 'desktop-only'
   desktopImage: string
-  mobileImage: string
 }
 
 interface DesktopMobileLayout {
@@ -23,7 +22,6 @@ interface DesktopMobileLayout {
 
 interface MobileTrioLayout {
   layout: 'mobile-trio'
-  desktopImage?: never
   mobileImage: [string, string, string]
 }
 
