@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import cn from '@/lib/utils/cn'
 import { JUMBOTRON_CONTENT, LOGO_DATA } from '@/constants/jumbotron'
+import Container from './Container'
 
 export default function Jumbotron() {
   const renderTagline = () => (
@@ -26,18 +27,18 @@ export default function Jumbotron() {
   )
 
   return (
-    <section
-      aria-labelledby="greeting-heading"
+    <Container
+      as="section"
       className={cn(
-        'flex flex-col items-center',
-        'px-6 pb-16 pt-24',
+        'px-6 pb-16 pt-[100px]',
         'sm:px-16 sm:pb-16 sm:pt-32',
         'md:p-32'
       )}
     >
       <div
+        aria-labelledby="greeting-heading"
         className={cn(
-          'flex flex-col items-center',
+          'mx-auto flex flex-col items-center',
           'gap-4 sm:gap-6',
           'w-full',
           'max-w-[327px] sm:max-w-[640px] md:max-w-[1184px]'
@@ -90,6 +91,6 @@ export default function Jumbotron() {
           ))}
         </div>
       </div>
-    </section>
+    </Container>
   )
 }

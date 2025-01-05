@@ -1,10 +1,11 @@
 import Button from '@/components/Button'
 import { EMAIL } from '@/constants/contact'
+import Container from './Container'
 
 export default function Footer() {
   return (
-    <footer className="flex flex-col">
-      <div className="flex flex-col items-center bg-blue-primary px-4 py-8 sm:px-16 sm:py-16 md:px-[218px]">
+    <footer className="flex flex-col bg-blue-primary">
+      <Container className="py-8 sm:py-16">
         <div className="flex flex-col items-center gap-6 sm:gap-8">
           <div className="flex flex-col items-center">
             <span className="text-footer-title">LETS TALK</span>
@@ -41,10 +42,9 @@ export default function Footer() {
             </Button>
           </a>
         </div>
-      </div>
-
+      </Container>
       <div className="footer-gradient flex flex-col items-center bg-blue-primary bg-[linear-gradient(rgb(0_0_0/20%)_0_0)]">
-        <div className="flex w-full flex-col items-center px-4 py-6 text-center md:max-w-[1214px] md:flex-row md:justify-between md:py-2 lg:max-w-[1312px]">
+        <div className="flex w-full flex-col items-center px-4 py-6 text-center sm:px-8 md:max-w-[1440px] md:flex-row md:justify-between md:px-16 md:py-2">
           <span className="text-footer-copyright text-slate-100">
             "DESIGN IS THINKING MADE VISUAL" - SAUL BASS
           </span>
