@@ -1,36 +1,83 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Modern Next.js Design System Components
+
+A collection of type-safe, accessible React components built for Next.js 15, implementing a comprehensive design system with performance and accessibility in mind.
+
+## Tech Stack
+
+- Next.js 15.1.2
+- React 19.0.0
+- TypeScript 5
+- Tailwind CSS 3.4.1
+- clsx 2.1.1
+- tailwind-merge 2.6.0
+
+## Features
+
+- Type-safe component implementations
+- Mobile-first responsive design
+- Optimized image handling via Next.js Image component
+- Consistent typography system
+- Accessible by default
+- Modern React patterns and best practices
+
+## Project Structure
+
+```bash
+src/
+  components/    # Reusable UI components
+  styles/        # Typography and Tailwind configurations
+  types/         # TypeScript definitions
+  utils/         # Utility functions
+```
 
 ## Getting Started
 
-First, run the development server:
-
+1. Install dependencies:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Run development server:
+```bash
+npm run dev
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Design System
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The project implements a comprehensive design system with:
 
-## Learn More
+- Responsive breakpoints:
+  - Mobile (default): 0-480px
+  - Tablet (sm): 481px-768px
+  - Desktop (md): 769px-1440px
+  - Ultrawide (lg): ≥1440px
 
-To learn more about Next.js, take a look at the following resources:
+- Typography scale:
+  - Label text (Geist Mono)
+  - Body text (Hauora, Inter)
+  - Heading variations (small, medium, large)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Custom color palette
+- Consistent spacing system
+- Component-specific design tokens
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Development Guidelines
 
-## Deploy on Vercel
+- Use TypeScript for all components and utilities
+- Follow mobile-first approach for styles
+- Implement WCAG accessibility standards
+- Use default exports with function declarations
+- Maintain consistent prop interfaces
+- Document components with JSDoc comments
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Contributing
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## License
+
+MIT License
