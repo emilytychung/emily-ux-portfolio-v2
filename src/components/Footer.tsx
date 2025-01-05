@@ -1,14 +1,16 @@
 import Button from '@/components/Button'
 import { EMAIL } from '@/constants/contact'
 import Container from './Container'
+import cn from '@/lib/utils/cn'
 
 interface FooterProps {
   isSimple?: boolean
+  className?: string
 }
 
-export default function Footer({ isSimple = false }: FooterProps) {
+export default function Footer({ isSimple = false, className }: FooterProps) {
   return (
-    <footer className="flex flex-col bg-blue-primary">
+    <footer className={cn('flex flex-col bg-blue-primary', className)}>
       {!isSimple && (
         <Container className="py-8 sm:py-16">
           <div className="flex flex-col items-center gap-6 sm:gap-8">
