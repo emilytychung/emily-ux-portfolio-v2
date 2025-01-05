@@ -9,7 +9,7 @@ export default function Testimonials() {
   return (
     <Container as="section">
       <SectionHeader sectionHeaderMap={SECTION_HEADERS.testimonials} />
-      <div className={cn('grid grid-cols-1', 'sm:gap-8 md:grid-cols-2')}>
+      <div className="grid grid-cols-1 gap-4 sm:gap-8 md:grid-cols-2">
         {TESTIMONIALS.map(({ imageUrl, name, title, testimonial }) => (
           <Card
             key={name}
