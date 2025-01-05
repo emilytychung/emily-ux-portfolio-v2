@@ -10,7 +10,7 @@ interface FooterProps {
 
 export default function Footer({ isSimple = false, className }: FooterProps) {
   return (
-    <footer className={cn('flex flex-col bg-blue-primary', className)}>
+    <footer className={cn('bg-blue-primary', className)}>
       {!isSimple && (
         <Container className="py-8 sm:py-16">
           <div className="flex flex-col items-center gap-6 sm:gap-8">
@@ -23,7 +23,6 @@ export default function Footer({ isSimple = false, className }: FooterProps) {
                 {EMAIL}
               </a>
             </div>
-
             <a href={`mailto:${EMAIL}`}>
               <Button
                 variant="secondary"

@@ -9,7 +9,7 @@ export default function Gallery() {
   return (
     <Container as="section">
       <SectionHeader sectionHeaderMap={SECTION_HEADERS.gallery} />
-      <div className="flex flex-col gap-6">
+      <div className="flex flex-col gap-4 sm:gap-6">
         {GALLERY.map(({ company, title, description, tags }) => (
           <PortfolioCard
             key={company}
@@ -21,7 +21,7 @@ export default function Gallery() {
           />
         ))}
       </div>
-      <div className="grid grid-cols-1 pt-2 sm:pt-6 md:grid-cols-2 md:gap-6">
+      <div className="flex flex-col gap-4 pt-4 sm:pt-6 md:grid md:grid-cols-2 md:gap-6">
         {SIMPLE_GALLERY.map(({ company, title, imgUrl }) => (
           <SimplePortfolioCard
             key={company}
