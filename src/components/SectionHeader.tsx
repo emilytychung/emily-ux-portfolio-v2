@@ -15,7 +15,7 @@ export default function SectionHeader({
     <div
       className={cn(
         // Mobile (375px)
-        'flex w-full flex-col items-center px-4 py-8',
+        'flex w-full flex-col items-center py-8',
         // Tablet (768px)
         'sm:py-16',
         // Desktop & Ultrawide (1440px)
