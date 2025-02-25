@@ -13,14 +13,14 @@ export const GALLERY: CaseStudy[] = [
     description:
       'Send money across Canada for both personal and business cusotmers',
     tags: ['ios', 'android'],
-    coverImage: '/images/gallery/td-interac/cover.png',
+    coverImage: '/images/case-studies/td-interac/cover.png',
   },
   {
     company: 'Headquarters',
     title: 'Payroll system',
     description: 'Allowing companies to transfer and manage payroll directly',
     tags: ['desktop'],
-    coverImage: '/images/gallery/headquarters/cover.png',
+    coverImage: '/images/case-studies/headquarters/cover.png',
   },
   {
     company: 'Canvass AI',
@@ -28,7 +28,7 @@ export const GALLERY: CaseStudy[] = [
     description:
       'Allowing manufacturing companies to easily implement into their process',
     tags: ['desktop'],
-    coverImage: '/images/gallery/canvass/cover.png',
+    coverImage: '/images/case-studies/canvass/cover.png',
   },
   {
     company: 'Mistplay',

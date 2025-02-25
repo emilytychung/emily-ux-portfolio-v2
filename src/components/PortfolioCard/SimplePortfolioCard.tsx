@@ -1,4 +1,4 @@
-SimplePortfolioCard
+import Image from 'next/image'
 import cn from '@/lib/utils/cn'
 import { type SimpleCaseStudy } from '@/constants/gallery'
 import { getPlatformDisplay } from '@/constants/platforms'
@@ -41,8 +41,8 @@ export default function SimplePortfolioCard({
         </div>
 
         {/* BOTTOM IMG */}
-        <div className="min-h-[400px] flex-1 rounded-[20px] bg-slate-100">
-          {/* Image layout component will go here */}
+        <div className="relative min-h-[400px] flex-1 rounded-[20px]">
+          <Image src={coverImage} alt={`Cover image for ${company}`} fill />
         </div>
       </div>
     </article>
