@@ -9,13 +9,14 @@ export default function Featured() {
     <Container as="section">
       <SectionHeader sectionHeaderMap={SECTION_HEADERS.caseStudies} />
       <div className="flex flex-col gap-6">
-        {FEATURED.map(({ company, title, description, tags }) => (
+        {FEATURED.map(({ company, title, description, tags, coverImage }) => (
           <PortfolioCard
             key={company}
             company={company}
             title={title}
             description={description}
             tags={tags}
+            coverImage={coverImage}
             section="featured"
           />
         ))}

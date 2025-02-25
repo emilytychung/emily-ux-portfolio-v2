@@ -1,11 +1,11 @@
 import cn from '@/lib/utils/cn'
-import { type BaseCaseStudy } from '@/constants/featured'
+import { type CaseStudy } from '@/constants/featured'
 import { getPlatformDisplay } from '@/constants/platforms'
 import { textStyles } from './styles'
 
 export type PortfolioSection = 'featured' | 'gallery'
 
-interface PortfolioCardProps extends BaseCaseStudy {
+interface PortfolioCardProps extends CaseStudy {
   className?: string
   section: PortfolioSection
 }
@@ -15,6 +15,7 @@ export default function PortfolioCard({
   title,
   description,
   tags,
+  coverImage,
   className,
   section,
 }: PortfolioCardProps) {

@@ -10,6 +10,7 @@ interface SimplePortfolioCardProps extends SimpleCaseStudy {
 export default function SimplePortfolioCard({
   company,
   title,
+  coverImage,
   className,
 }: SimplePortfolioCardProps) {
   return (

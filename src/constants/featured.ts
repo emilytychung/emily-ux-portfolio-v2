@@ -1,32 +1,12 @@
 import { PlatformKey } from './platforms'
 
-// Base case study properties
-export type BaseCaseStudy = {
+export type CaseStudy = {
   company: string
   title: string
   description: string
   tags: PlatformKey[]
+  coverImage: string
 }
-
-// Specific layout types
-interface DesktopOnlyLayout {
-  layout: 'desktop-only'
-  desktopImage: string
-}
-
-interface DesktopMobileLayout {
-  layout: 'desktop-mobile'
-  desktopImage: string
-  mobileImage: string
-}
-
-interface MobileTrioLayout {
-  layout: 'mobile-trio'
-  mobileImage: [string, string, string]
-}
-
-export type CaseStudy = BaseCaseStudy &
-  (DesktopOnlyLayout | DesktopMobileLayout | MobileTrioLayout)
 
 export const FEATURED: CaseStudy[] = [
   {
@@ -34,30 +14,21 @@ export const FEATURED: CaseStudy[] = [
     title: 'Global Transfers Case Study',
     description: 'Marketplace to shop rates and send money',
     tags: ['desktop', 'ios', 'android'],
-    layout: 'desktop-mobile',
-    desktopImage: '/images/case-studies/td/desktop.png',
-    mobileImage: '/images/case-studies/td/mobile.png',
+    coverImage: '/images/case-studies/td-global-transfers/cover.png',
   },
   {
     company: 'Solana',
     title: 'Name Service Case Study',
     description: 'E-commerce platform to register domains on Solana',
     tags: ['desktop'],
-    layout: 'desktop-mobile',
-    desktopImage: '/images/case-studies/solana/desktop.png',
-    mobileImage: '/images/case-studies/solana/mobile.png',
+    coverImage: '/images/case-studies/solana/cover.png',
   },
   {
     company: 'Mistplay',
     title: 'Refer Friends Case Study',
     description: 'Boosting engagement on an advertising gaming app',
     tags: ['android'],
-    layout: 'mobile-trio',
-    mobileImage: [
-      '/images/case-studies/mistplay/mobile-1.png',
-      '/images/case-studies/mistplay/mobile-2.png',
-      '/images/case-studies/mistplay/mobile-3.png',
-    ],
+    coverImage: '/images/case-studies/mistplay-refer-friends/cover.png',
   },
 ] as const
 

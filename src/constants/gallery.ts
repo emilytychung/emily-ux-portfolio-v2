@@ -3,7 +3,7 @@ import { CaseStudy } from './featured'
 export type SimpleCaseStudy = {
   company: string
   title: string
-  imgUrl: string
+  coverImage: string
 }
 
 export const GALLERY: CaseStudy[] = [
@@ -13,20 +13,14 @@ export const GALLERY: CaseStudy[] = [
     description:
       'Send money across Canada for both personal and business cusotmers',
     tags: ['ios', 'android'],
-    layout: 'mobile-trio',
-    mobileImage: [
-      '/images/gallery/td/mobile.png',
-      '/images/gallery/td/mobile.png',
-      '/images/gallery/td/mobile.png',
-    ],
+    coverImage: '/images/gallery/td-interac/cover.png',
   },
   {
     company: 'Headquarters',
     title: 'Payroll system',
     description: 'Allowing companies to transfer and manage payroll directly',
     tags: ['desktop'],
-    layout: 'desktop-only',
-    desktopImage: '/images/gallery/headquarters/desktop.png',
+    coverImage: '/images/gallery/headquarters/cover.png',
   },
   {
     company: 'Canvass AI',
@@ -34,20 +28,14 @@ export const GALLERY: CaseStudy[] = [
     description:
       'Allowing manufacturing companies to easily implement into their process',
     tags: ['desktop'],
-    layout: 'desktop-only',
-    desktopImage: '/images/gallery/canvass/desktop.png',
+    coverImage: '/images/gallery/canvass/cover.png',
   },
   {
     company: 'Mistplay',
     title: 'Design system',
     description: 'Change from light mode to dark mode with a flip of a switch',
     tags: ['android'],
-    layout: 'mobile-trio',
-    mobileImage: [
-      '/images/case-studies/mistplay/mobile-1.png',
-      '/images/case-studies/mistplay/mobile-2.png',
-      '/images/case-studies/mistplay/mobile-3.png',
-    ],
+    coverImage: '/images/case-studies/mistplay-design-system/cover.png',
   },
 ] as const
 
@@ -55,21 +43,21 @@ export const SIMPLE_GALLERY: SimpleCaseStudy[] = [
   {
     company: 'Ribbon',
     title: 'HR Software Tool',
-    imgUrl: '',
+    coverImage: '/images/case-studies/ribbon/cover.png',
   },
   {
     company: 'Mistplay',
     title: 'Illustrations',
-    imgUrl: '',
+    coverImage: '/images/case-studies/mistplay-illustrations/cover.png',
   },
   {
     company: 'Avantis',
     title: 'Trading Dashboard',
-    imgUrl: '',
+    coverImage: '/images/case-studies/avantis/cover.png',
   },
   {
     company: 'Uniswap',
     title: 'User Research',
-    imgUrl: '',
+    coverImage: '/images/case-studies/uniswap/cover.png',
   },
 ] as const
