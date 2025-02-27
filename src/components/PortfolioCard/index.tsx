@@ -34,9 +34,9 @@ export default function PortfolioCard({
       role="article"
       aria-labelledby="case-study-title"
     >
-      <div className="flex h-full flex-col gap-8 overflow-hidden rounded-[32px] border border-slate-100 bg-gradient-to-tr from-[#f8f8f8] to-slate-50 p-5 px-6 py-8 sm:gap-16 sm:p-14 md:flex-row md:gap-20 md:py-20">
+      <div className="flex flex-col justify-between overflow-hidden rounded-[32px] border border-slate-100 bg-gradient-to-tr from-[#f8f8f8] to-slate-50 md:flex-row md:gap-10">
         {/* Left Column */}
-        <div className="flex w-full flex-col justify-between md:w-[420px]">
+        <div className="flex w-full flex-col justify-between px-6 py-8 sm:p-14 md:my-20 md:ml-14 md:w-[420px] md:p-0">
           <div className="flex flex-col gap-2 sm:gap-5">
             <h3
               className={cn(
@@ -65,7 +65,7 @@ export default function PortfolioCard({
             </p>
           </div>
           <div
-            className="mt-6 flex flex-wrap gap-3 sm:mt-8 md:mt-0"
+            className="mt-6 flex flex-wrap gap-3 sm:mt-8 md:mt-16"
             role="list"
             aria-label="Platforms"
           >
@@ -87,10 +87,9 @@ export default function PortfolioCard({
             ))}
           </div>
         </div>
-
-        {/* Right Column - Placeholder */}
-        <div className="relative min-h-[400px] flex-1 rounded-[20px]">
-          <Image src={coverImage} alt={`Cover image for ${company}`} fill />
+        {/* Right Column */}
+        <div className="flex items-end rounded-[20px] sm:pl-12 md:px-0">
+          <Image src={coverImage} alt={`Cover image for ${company}`} />
         </div>
       </div>
     </article>

@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import cn from '@/lib/utils/cn'
 import { type SimpleCaseStudy } from '@/constants/gallery'
-import { getPlatformDisplay } from '@/constants/platforms'
+import { textStyles } from './styles'
 
 interface SimplePortfolioCardProps extends SimpleCaseStudy {
   className?: string
@@ -13,6 +13,8 @@ export default function SimplePortfolioCard({
   coverImage,
   className,
 }: SimplePortfolioCardProps) {
+  const typography = textStyles.gallery
+
   return (
     <article
       className={cn(
@@ -25,24 +27,32 @@ export default function SimplePortfolioCard({
       role="article"
       aria-labelledby="case-study-title"
     >
-      <div className="flex h-full flex-col gap-8 overflow-hidden rounded-[32px] border border-slate-100 bg-gradient-to-tr from-[#f8f8f8] to-slate-50 px-6 py-8 sm:p-14">
-        <div className="flex w-full flex-col justify-between">
+      <div className="flex flex-col overflow-hidden rounded-[32px] border border-slate-100 bg-gradient-to-tr from-[#f8f8f8] to-slate-50">
+        <div className="flex w-full flex-col justify-between px-6 py-8 pb-4 sm:p-14 sm:pb-8">
           <div className="flex flex-col gap-2 sm:gap-5">
             <h3
-              className="font-hauora text-[13px] text-slate-500 sm:text-[24px]"
+              className={cn(
+                'font-hauora text-[13px] text-slate-500',
+                typography.company
+              )}
               aria-label={`Case study for ${company}`}
             >
               {company}
             </h3>
-            <h2 className="overflow-hidden overflow-ellipsis whitespace-nowrap font-hauora text-[24px] font-semibold text-slate-700 sm:text-[42px]">
+            <h2
+              className={cn(
+                'overflow-hidden overflow-ellipsis whitespace-nowrap font-hauora text-[24px] font-semibold text-slate-700',
+                typography.title
+              )}
+            >
               {title}
             </h2>
           </div>
         </div>
 
         {/* BOTTOM IMG */}
-        <div className="relative min-h-[400px] flex-1 rounded-[20px]">
-          <Image src={coverImage} alt={`Cover image for ${company}`} fill />
+        <div className="relative rounded-[20px] pl-2 sm:pl-5">
+          <Image src={coverImage} alt={`Cover image for ${company}`} />
         </div>
       </div>
     </article>

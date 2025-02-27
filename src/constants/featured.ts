@@ -1,11 +1,15 @@
 import { PlatformKey } from './platforms'
+import tdGlobalTransfers from '@images/case-studies/td-global-transfers/cover.png'
+import solana from '@images/case-studies/solana/cover.png'
+import mistplayReferFriends from '@images/case-studies/mistplay-refer-friends/cover.png'
+import { StaticImageData } from 'next/image'
 
 export type CaseStudy = {
   company: string
   title: string
   description: string
   tags: PlatformKey[]
-  coverImage: string
+  coverImage: StaticImageData
 }
 
 export const FEATURED: CaseStudy[] = [
@@ -14,21 +18,21 @@ export const FEATURED: CaseStudy[] = [
     title: 'Global Transfers Case Study',
     description: 'Marketplace to shop rates and send money',
     tags: ['desktop', 'ios', 'android'],
-    coverImage: '/images/case-studies/td-global-transfers/cover.png',
+    coverImage: tdGlobalTransfers,
   },
   {
     company: 'Solana',
     title: 'Name Service Case Study',
     description: 'E-commerce platform to register domains on Solana',
     tags: ['desktop'],
-    coverImage: '/images/case-studies/solana/cover.png',
+    coverImage: solana,
   },
   {
     company: 'Mistplay',
     title: 'Refer Friends Case Study',
     description: 'Boosting engagement on an advertising gaming app',
     tags: ['android'],
-    coverImage: '/images/case-studies/mistplay-refer-friends/cover.png',
+    coverImage: mistplayReferFriends,
   },
 ] as const
 
