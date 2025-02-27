@@ -41,7 +41,7 @@ export const MobileMenuItems = ({
   return (
     <Link
       href={href}
-      className="flex items-center gap-2 rounded-md p-2 hover:bg-slate-50"
+      className="flex items-center gap-2 rounded-md px-2 py-2.5 hover:bg-slate-50"
       aria-label={`View ${label}`}
       onClick={onClick}
     >
