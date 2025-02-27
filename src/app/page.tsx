@@ -1,13 +1,11 @@
+import { NavBar } from '@/components/NavBar'
 import Jumbotron from '@/components/Jumbotron'
-import SectionHeader from '@/components/SectionHeader'
 import Gallery from '@/components/Gallery'
 import Testimonials from '@/components/Testimonials'
-import { SECTION_HEADERS } from '@/constants/sections'
 import Featured from '@/components/Featured'
 import Footer from '@/components/Footer'
 import ProtectedRoute from '@/components/ProtectedRoute'
-import { NavBar } from '@/components/NavBar'
-import Container from '@/components/Container'
+import About from '@/components/About'
 
 export default function Home() {
   return (
@@ -17,9 +15,7 @@ export default function Home() {
       <Featured />
       <Gallery />
       <Testimonials />
-      <Container as="section" id={SECTION_HEADERS.personal.id}>
-        <SectionHeader sectionHeaderMap={SECTION_HEADERS.personal} />
-      </Container>
+      <About />
       <Footer />
     </ProtectedRoute>
   )
