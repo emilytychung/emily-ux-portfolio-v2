@@ -15,6 +15,16 @@ export const hauora = localFont({
   variable: '--font-hauora',
 })
 
+export const hanziPen = localFont({
+  src: [
+    {
+      path: '../../public/fonts/Hanzipen-tc-regular.otf',
+      weight: '400',
+    },
+  ],
+  variable: '--font-hanziPen',
+})
+
 export const mono = Geist_Mono({
   subsets: ['latin'],
   variable: '--font-geist-mono',

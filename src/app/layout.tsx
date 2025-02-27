@@ -1,4 +1,4 @@
-import { hauora, mono, inter } from '@/lib/fonts'
+import { hauora, mono, inter, hanziPen } from '@/lib/fonts'
 import SEO_METADATA from '@/constants/seo-metadata'
 import '@/styles/globals.css'
 import '@/styles/typography.css'
@@ -14,7 +14,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${hauora.variable} ${mono.variable} ${inter.variable}`}
+      className={`${hauora.variable} ${mono.variable} ${inter.variable} ${hanziPen.variable}`}
     >
       <body className="font-hauora">{children}</body>
     </html>

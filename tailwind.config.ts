@@ -17,6 +17,7 @@ export default {
         hauora: ['var(--font-hauora)'],
         geist: ['var(--font-geist-mono)'],
         inter: ['var(--font-inter)'],
+        hanziPen: ['var(--font-hanziPen)'],
         awesome: ['Font Awesome 6 Pro'],
       },
       fontSize: {

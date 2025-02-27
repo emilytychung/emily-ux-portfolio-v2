@@ -33,11 +33,13 @@ src/
 ## Getting Started
 
 1. Install dependencies:
+
 ```bash
 npm install
 ```
 
 2. Run development server:
+
 ```bash
 npm run dev
 ```
@@ -47,14 +49,16 @@ npm run dev
 The project implements a comprehensive design system with:
 
 - Responsive breakpoints:
+
   - Mobile (default): 0-480px
   - Tablet (sm): 481px-768px
   - Desktop (md): 769px-1440px
   - Ultrawide (lg): ≥1440px
 
 - Typography scale:
+
   - Label text (Geist Mono)
-  - Body text (Hauora, Inter)
+  - Body text (Hauora, Inter, HanziPen)
   - Heading variations (small, medium, large)
 
 - Custom color palette

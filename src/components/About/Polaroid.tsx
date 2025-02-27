@@ -37,7 +37,7 @@ export default function Polaroid({
           priority
         />
       </div>
-      <h3 className="flex w-full flex-1 items-center justify-center text-center font-hauora text-xl leading-[150%] tracking-tight text-slate-700">
+      <h3 className="font-hanziPen flex w-full flex-1 items-center justify-center text-center text-xl leading-[150%] tracking-tight text-slate-700">
         {title}
       </h3>
     </div>
