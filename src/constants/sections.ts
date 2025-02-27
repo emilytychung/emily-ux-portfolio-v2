@@ -1,6 +1,7 @@
 export interface SectionHeaderMap {
   labelText: string
   headingText: string
+  id?: string
 }
 
 export type SectionKey = 'caseStudies' | 'gallery' | 'testimonials' | 'personal'
@@ -9,6 +10,7 @@ export const SECTION_HEADERS: Record<SectionKey, SectionHeaderMap> = {
   caseStudies: {
     labelText: 'featured case studies',
     headingText: 'From concept to design',
+    id: 'work',
   },
   gallery: {
     labelText: 'gallery',
@@ -21,6 +23,7 @@ export const SECTION_HEADERS: Record<SectionKey, SectionHeaderMap> = {
   personal: {
     labelText: 'outside of work',
     headingText: 'Polaroids from my personal life',
+    id: 'about',
   },
 } as const
 
