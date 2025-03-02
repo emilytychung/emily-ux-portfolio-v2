@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { BriefcaseIcon, UserIcon } from './Icons'
+import Button from '@/components/Button'
 
 export const HOME_MENU_ITEMS = [
   { href: '#work', label: 'Work', icon: <BriefcaseIcon /> },
@@ -18,7 +19,7 @@ export const DesktopMenuItems = ({
   return (
     <Link
       href={href}
-      className="group flex items-center gap-2"
+      className="group flex items-center gap-2 transition-opacity duration-300 ease-in-out hover:opacity-70"
       aria-label={`View ${label}`}
     >
       {icon}

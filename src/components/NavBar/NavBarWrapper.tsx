@@ -69,7 +69,7 @@ export default function NavBarWrapper({
           {isMenuOpen && menuContent && (
             <motion.div
               ref={contentRef}
-              initial={{ height: 0, opacity: 0, borderRadius: 50 }}
+              initial={{ height: 0, opacity: 0 }}
               animate={{
                 height: 'auto',
                 opacity: 1,
