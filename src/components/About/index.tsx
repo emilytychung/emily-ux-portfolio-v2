@@ -19,7 +19,7 @@ export default function About() {
       <SectionHeader sectionHeaderMap={SECTION_HEADERS.personal} />
 
       <div
-        className="relative mx-auto flex h-[1481px] w-full max-w-[1200px] items-center justify-center transition-[height] duration-500 ease-out sm:h-[1421px] md:h-[708px]"
+        className="relative mx-auto flex h-[1481px] w-full max-w-[1200px] items-center justify-center transition-[height] duration-500 ease-out sm:h-[1421px] md:h-[800px]"
         aria-live="polite"
       >
         <div className="polaroid-container relative h-full w-full">

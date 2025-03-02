@@ -1,5 +1,5 @@
 import type { StaticImageData } from 'next/image'
-import bubbles from '@images/polaroids/bubbles.png'
+import pebbles from '@images/polaroids/pebbles.png'
 import travelling from '@images/polaroids/travelling.png'
 import cooking from '@images/polaroids/cooking.png'
 import cafeHopping from '@images/polaroids/cafe.png'
@@ -22,8 +22,8 @@ interface PolaroidData {
 
 export const POLAROID_DATA: PolaroidData[] = [
   {
-    imgFile: bubbles,
-    title: 'Bubbles (RIP)',
+    imgFile: pebbles,
+    title: 'Pebbles (RIP)',
     rotations: {
       mobile: -5.2,
       tablet: -4.95,

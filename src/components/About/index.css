@@ -4,7 +4,7 @@
   position: relative;
 }
 
-/* Base polaroid positioning for mobile - adjusting positioning to stay within viewport */
+/* Base polaroid positioning for mobile */
 .polaroid-1 {
   top: 3%;
   left: calc(50% - 172px);
@@ -35,7 +35,7 @@
   transform: rotate(-5.2deg);
 }
 
-/* Tablet breakpoint - adjusting positioning to stay within viewport */
+/* Tablet breakpoint */
 @media (min-width: 481px) {
   .polaroid-1 {
     top: 0;
@@ -68,35 +68,39 @@
   }
 }
 
-/* Desktop/Ultrawide breakpoint - can go outside viewport on sides */
+/* Desktop/Ultrawide breakpoint  */
 @media (min-width: 900px) {
+  .polaroid-container {
+    max-width: 1800px;
+  }
+
   .polaroid-1 {
-    top: 14%;
-    left: -120px;
+    top: 10%;
+    left: calc(30% - 600px);
     transform: rotate(-4.95deg);
   }
 
   .polaroid-2 {
-    top: 5%;
-    left: 422px;
+    top: 0;
+    left: calc(40% - 100px);
     transform: rotate(3.5deg);
   }
 
   .polaroid-3 {
-    top: 39%;
-    left: 729px;
+    top: 48%;
+    left: calc(35% + 250px);
     transform: rotate(-1deg);
   }
 
   .polaroid-4 {
-    top: 44%;
-    left: 129px;
+    top: 42%;
+    left: calc(30% - 250px);
     transform: rotate(3deg);
   }
 
   .polaroid-5 {
     top: 14%;
-    left: 963px;
+    left: calc(50% + 380px);
     transform: rotate(-5.2deg);
   }
 }
