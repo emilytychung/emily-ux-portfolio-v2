@@ -6,12 +6,14 @@ interface ContainerProps {
   children: ReactNode
   className?: string
   as?: keyof HTMLElementTagNameMap
+  id?: string
 }
 
 export default function Container({
   children,
   className,
   as: Component = 'div',
+  id,
 }: ContainerProps) {
   return (
     <Component
@@ -21,6 +23,7 @@ export default function Container({
         'md:max-w-[1440px] md:px-16', // Desktop & Ultrawide (769px+)
         className
       )}
+      id={id}
     >
       {children}
     </Component>

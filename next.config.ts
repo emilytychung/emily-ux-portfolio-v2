@@ -5,6 +5,12 @@ const nextConfig: NextConfig = {
     // For local SVGs and images
     dangerouslyAllowSVG: true,
     contentDispositionType: 'attachment',
+    localPatterns: [
+      {
+        pathname: '/images/**',
+        search: '',
+      },
+    ],
   },
 }
 

@@ -1,9 +1,18 @@
+import { StaticImageData } from 'next/image'
 import { CaseStudy } from './featured'
+import tdInterac from '@images/case-studies/td-interac/cover.png'
+import headquarters from '@images/case-studies/headquarters/cover.png'
+import canvass from '@images/case-studies/canvass/cover.png'
+import mistplayDesignSystem from '@images/case-studies/mistplay-design-system/cover.png'
+import mistplayIllustrations from '@images/case-studies/mistplay-illustrations/cover.png'
+import ribbon from '@images/case-studies/ribbon/cover.png'
+import avantis from '@images/case-studies/avantis/cover.png'
+import uniswap from '@images/case-studies/uniswap/cover.png'
 
 export type SimpleCaseStudy = {
   company: string
   title: string
-  imgUrl: string
+  coverImage: StaticImageData
 }
 
 export const GALLERY: CaseStudy[] = [
@@ -13,20 +22,14 @@ export const GALLERY: CaseStudy[] = [
     description:
       'Send money across Canada for both personal and business cusotmers',
     tags: ['ios', 'android'],
-    layout: 'mobile-trio',
-    mobileImage: [
-      '/images/gallery/td/mobile.png',
-      '/images/gallery/td/mobile.png',
-      '/images/gallery/td/mobile.png',
-    ],
+    coverImage: tdInterac,
   },
   {
     company: 'Headquarters',
     title: 'Payroll system',
     description: 'Allowing companies to transfer and manage payroll directly',
     tags: ['desktop'],
-    layout: 'desktop-only',
-    desktopImage: '/images/gallery/headquarters/desktop.png',
+    coverImage: headquarters,
   },
   {
     company: 'Canvass AI',
@@ -34,20 +37,14 @@ export const GALLERY: CaseStudy[] = [
     description:
       'Allowing manufacturing companies to easily implement into their process',
     tags: ['desktop'],
-    layout: 'desktop-only',
-    desktopImage: '/images/gallery/canvass/desktop.png',
+    coverImage: canvass,
   },
   {
     company: 'Mistplay',
     title: 'Design system',
     description: 'Change from light mode to dark mode with a flip of a switch',
     tags: ['android'],
-    layout: 'mobile-trio',
-    mobileImage: [
-      '/images/case-studies/mistplay/mobile-1.png',
-      '/images/case-studies/mistplay/mobile-2.png',
-      '/images/case-studies/mistplay/mobile-3.png',
-    ],
+    coverImage: mistplayDesignSystem,
   },
 ] as const
 
@@ -55,21 +52,21 @@ export const SIMPLE_GALLERY: SimpleCaseStudy[] = [
   {
     company: 'Ribbon',
     title: 'HR Software Tool',
-    imgUrl: '',
+    coverImage: ribbon,
   },
   {
     company: 'Mistplay',
     title: 'Illustrations',
-    imgUrl: '',
+    coverImage: mistplayIllustrations,
   },
   {
     company: 'Avantis',
     title: 'Trading Dashboard',
-    imgUrl: '',
+    coverImage: avantis,
   },
   {
     company: 'Uniswap',
     title: 'User Research',
-    imgUrl: '',
+    coverImage: uniswap,
   },
 ] as const

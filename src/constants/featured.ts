@@ -1,32 +1,16 @@
 import { PlatformKey } from './platforms'
+import tdGlobalTransfers from '@images/case-studies/td-global-transfers/cover.png'
+import solana from '@images/case-studies/solana/cover.png'
+import mistplayReferFriends from '@images/case-studies/mistplay-refer-friends/cover.png'
+import { StaticImageData } from 'next/image'
 
-// Base case study properties
-export type BaseCaseStudy = {
+export type CaseStudy = {
   company: string
   title: string
   description: string
   tags: PlatformKey[]
+  coverImage: StaticImageData
 }
-
-// Specific layout types
-interface DesktopOnlyLayout {
-  layout: 'desktop-only'
-  desktopImage: string
-}
-
-interface DesktopMobileLayout {
-  layout: 'desktop-mobile'
-  desktopImage: string
-  mobileImage: string
-}
-
-interface MobileTrioLayout {
-  layout: 'mobile-trio'
-  mobileImage: [string, string, string]
-}
-
-export type CaseStudy = BaseCaseStudy &
-  (DesktopOnlyLayout | DesktopMobileLayout | MobileTrioLayout)
 
 export const FEATURED: CaseStudy[] = [
   {
@@ -34,30 +18,21 @@ export const FEATURED: CaseStudy[] = [
     title: 'Global Transfers Case Study',
     description: 'Marketplace to shop rates and send money',
     tags: ['desktop', 'ios', 'android'],
-    layout: 'desktop-mobile',
-    desktopImage: '/images/case-studies/td/desktop.png',
-    mobileImage: '/images/case-studies/td/mobile.png',
+    coverImage: tdGlobalTransfers,
   },
   {
     company: 'Solana',
     title: 'Name Service Case Study',
     description: 'E-commerce platform to register domains on Solana',
     tags: ['desktop'],
-    layout: 'desktop-mobile',
-    desktopImage: '/images/case-studies/solana/desktop.png',
-    mobileImage: '/images/case-studies/solana/mobile.png',
+    coverImage: solana,
   },
   {
     company: 'Mistplay',
     title: 'Refer Friends Case Study',
     description: 'Boosting engagement on an advertising gaming app',
     tags: ['android'],
-    layout: 'mobile-trio',
-    mobileImage: [
-      '/images/case-studies/mistplay/mobile-1.png',
-      '/images/case-studies/mistplay/mobile-2.png',
-      '/images/case-studies/mistplay/mobile-3.png',
-    ],
+    coverImage: mistplayReferFriends,
   },
 ] as const
 

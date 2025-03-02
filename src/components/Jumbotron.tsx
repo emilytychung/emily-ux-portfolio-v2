@@ -29,6 +29,7 @@ export default function Jumbotron() {
   return (
     <Container
       as="section"
+      id="home"
       className={cn(
         'px-6 pb-16 pt-[100px]',
         'sm:px-16 sm:pb-16 sm:pt-32',

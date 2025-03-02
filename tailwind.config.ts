@@ -8,8 +8,8 @@ export default {
   theme: {
     screens: {
       // Mobile is default (0-480px)
-      sm: '481px', // 481px-768px (Tablet)
-      md: '769px', // 769px-1440px (Desktop)
+      sm: '481px', // 481px-899px (Tablet)
+      md: '900px', // 900px-1440px (Desktop)
       lg: '1440px', // ≥1440px (Ultrawide)
     },
     extend: {
@@ -17,6 +17,7 @@ export default {
         hauora: ['var(--font-hauora)'],
         geist: ['var(--font-geist-mono)'],
         inter: ['var(--font-inter)'],
+        hanziPen: ['var(--font-hanziPen)'],
         awesome: ['Font Awesome 6 Pro'],
       },
       fontSize: {
