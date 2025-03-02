@@ -1,94 +1,43 @@
 'use client'
-import { useEffect, useState, useCallback } from 'react'
+import { useState } from 'react'
 import Container from '@/components/Container'
 import { SECTION_HEADERS } from '@/constants/sections'
 import SectionHeader from '@/components/SectionHeader'
 import Polaroid from './Polaroid'
 import { POLAROID_DATA } from '@/constants/polaroids'
-
-type Breakpoint = 'mobile' | 'tablet' | 'desktop' | 'ultrawide'
+import './index.css'
 
 export default function About() {
-  const [breakpoint, setBreakpoint] = useState<Breakpoint>('mobile')
   const [selectedPolaroid, setSelectedPolaroid] = useState<number | null>(null)
 
-  // Detect breakpoint with more reliable implementation
-  useEffect(() => {
-    function getBreakpoint(): Breakpoint {
-      const width = window.innerWidth
-      if (width >= 1440) return 'ultrawide'
-      if (width >= 900) return 'desktop'
-      if (width >= 481) return 'tablet'
-      return 'mobile'
-    }
-
-    // Set initial breakpoint
-    setBreakpoint(getBreakpoint())
-
-    // Simple resize handler without debounce
-    function handleResize() {
-      const newBreakpoint = getBreakpoint()
-      if (newBreakpoint !== breakpoint) {
-        console.log(`Breakpoint changed: ${breakpoint} -> ${newBreakpoint}`)
-        setBreakpoint(newBreakpoint)
-      }
-    }
-
-    // Add event listener
-    window.addEventListener('resize', handleResize)
-
-    // Clean up
-    return () => window.removeEventListener('resize', handleResize)
-  }, [breakpoint]) // Include breakpoint in dependencies
-
-  const handlePolaroidClick = useCallback(
-    (index: number) => {
-      setSelectedPolaroid(selectedPolaroid === index ? null : index)
-    },
-    [selectedPolaroid]
-  )
-
-  // Calculate appropriate height based on breakpoint
-  const sectionHeight =
-    breakpoint === 'mobile'
-      ? 'h-[1481px]'
-      : breakpoint === 'tablet'
-        ? 'h-[1421px]'
-        : 'h-[708px]'
-
   return (
-    <Container as="section" id={SECTION_HEADERS.personal.id}>
+    <Container
+      as="section"
+      id={SECTION_HEADERS.personal.id}
+      className="flex flex-col sm:overflow-hidden lg:overflow-visible"
+    >
       <SectionHeader sectionHeaderMap={SECTION_HEADERS.personal} />
 
-      {/* Debug info (remove in production) */}
-      <div className="mb-4 text-sm text-slate-500">
-        Current breakpoint: {breakpoint}
-      </div>
-
       <div
-        className={`relative w-full ${sectionHeight} transition-[height] duration-500 ease-out`}
+        className="relative mx-auto flex h-[1481px] w-full max-w-[1200px] items-center justify-center transition-[height] duration-500 ease-out sm:h-[1421px] md:h-[708px]"
         aria-live="polite"
       >
-        {POLAROID_DATA.map(
-          ({ imgFile, title, rotations, position, zIndex }, index) => (
+        <div className="polaroid-container relative h-full w-full">
+          {POLAROID_DATA.map((polaroid, index) => (
             <Polaroid
-              key={`${title}-${breakpoint}`} // Force re-render on breakpoint change
-              imgFile={imgFile}
-              alt={title}
-              title={title}
-              rotation={selectedPolaroid === index ? 0 : rotations[breakpoint]}
-              style={{
-                position: 'absolute',
-                top: position[breakpoint].top,
-                left: position[breakpoint].left,
-                transition:
-                  'transform 0.5s ease-out, top 0.5s ease-out, left 0.5s ease-out',
-                zIndex: selectedPolaroid === index ? 50 : zIndex,
-              }}
-              onClick={() => handlePolaroidClick(index)}
+              key={polaroid.title}
+              imgFile={polaroid.imgFile}
+              alt={polaroid.title}
+              title={polaroid.title}
+              isSelected={selectedPolaroid === index}
+              className={`absolute transition-all duration-500 ease-out ${selectedPolaroid === index ? 'polaroid-selected z-[60]' : `z-[${polaroid.zIndex}]`} ${index % 2 === 0 ? 'polaroid-hover-right' : 'polaroid-hover-left'} polaroid-${index + 1} `}
+              rotation={polaroid.rotations.mobile}
+              onClick={() =>
+                setSelectedPolaroid(selectedPolaroid === index ? null : index)
+              }
             />
-          )
-        )}
+          ))}
+        </div>
       </div>
     </Container>
   )
