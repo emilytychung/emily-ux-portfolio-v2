@@ -1,5 +1,5 @@
 import { StaticImageData } from 'next/image'
-import { CaseStudy } from './featured'
+import { CaseStudyBase } from './featured'
 import tdInterac from '@images/case-studies/td-interac/cover.png'
 import headquarters from '@images/case-studies/headquarters/cover.png'
 import canvass from '@images/case-studies/canvass/cover.png'
@@ -9,13 +9,13 @@ import ribbon from '@images/case-studies/ribbon/cover.png'
 import avantis from '@images/case-studies/avantis/cover.png'
 import uniswap from '@images/case-studies/uniswap/cover.png'
 
-export type SimpleCaseStudy = {
+export type SimpleCaseStudyBase = {
   company: string
   title: string
   coverImage: StaticImageData
 }
 
-export const GALLERY: CaseStudy[] = [
+export const GALLERY: CaseStudyBase[] = [
   {
     company: 'TD Canada Trust',
     title: 'Interac e-Transfer',
@@ -48,7 +48,7 @@ export const GALLERY: CaseStudy[] = [
   },
 ] as const
 
-export const SIMPLE_GALLERY: SimpleCaseStudy[] = [
+export const SIMPLE_GALLERY: SimpleCaseStudyBase[] = [
   {
     company: 'Ribbon',
     title: 'HR Software Tool',

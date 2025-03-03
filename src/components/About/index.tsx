@@ -13,10 +13,10 @@ export default function About() {
   return (
     <Container
       as="section"
-      id={SECTION_HEADERS.personal.id}
+      id={SECTION_HEADERS.about.id}
       className="flex flex-col sm:overflow-hidden lg:overflow-visible"
     >
-      <SectionHeader sectionHeaderMap={SECTION_HEADERS.personal} />
+      <SectionHeader sectionHeaderMap={SECTION_HEADERS.about} />
 
       <div
         className="relative mx-auto flex h-[1481px] w-full max-w-[1200px] items-center justify-center transition-[height] duration-500 ease-out sm:h-[1421px] md:h-[800px]"

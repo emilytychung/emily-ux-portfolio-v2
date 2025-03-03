@@ -4,7 +4,7 @@ import solana from '@images/case-studies/solana/cover.png'
 import mistplayReferFriends from '@images/case-studies/mistplay-refer-friends/cover.png'
 import { StaticImageData } from 'next/image'
 
-export type CaseStudy = {
+export type CaseStudyBase = {
   company: string
   title: string
   description: string
@@ -12,7 +12,7 @@ export type CaseStudy = {
   coverImage: StaticImageData
 }
 
-export const FEATURED: CaseStudy[] = [
+export const FEATURED_BASE: CaseStudyBase[] = [
   {
     company: 'TD Canada Trust',
     title: 'Global Transfers Case Study',
@@ -35,5 +35,3 @@ export const FEATURED: CaseStudy[] = [
     coverImage: mistplayReferFriends,
   },
 ] as const
-
-export type CaseStudyData = (typeof FEATURED)[number]

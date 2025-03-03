@@ -1,12 +1,12 @@
 import Image from 'next/image'
 import cn from '@/lib/utils/cn'
-import { type CaseStudy } from '@/constants/featured'
+import { type CaseStudyBase } from '@/constants/featured'
 import { getPlatformDisplay } from '@/constants/platforms'
 import { textStyles } from './styles'
 
 export type PortfolioSection = 'featured' | 'gallery'
 
-interface PortfolioCardProps extends CaseStudy {
+interface PortfolioCardProps extends CaseStudyBase {
   className?: string
   section: PortfolioSection
 }
