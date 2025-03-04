@@ -25,7 +25,7 @@ export default function SimplePortfolioCard({
         className
       )}
       role="article"
-      aria-labelledby="case-study-title"
+      aria-labelledby="project-title-title"
     >
       <div className="flex flex-col overflow-hidden rounded-[32px] border border-slate-100 bg-gradient-to-tr from-[#f8f8f8] to-slate-50">
         <div className="flex w-full flex-col justify-between px-6 py-8 pb-4 sm:p-14 sm:pb-8">

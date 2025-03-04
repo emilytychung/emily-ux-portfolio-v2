@@ -32,7 +32,7 @@ export default function PortfolioCard({
         className
       )}
       role="article"
-      aria-labelledby="case-study-title"
+      aria-labelledby="project-title-title"
     >
       <div className="flex flex-col justify-between overflow-hidden rounded-[32px] border border-slate-100 bg-gradient-to-tr from-[#f8f8f8] to-slate-50 md:flex-row md:gap-10">
         {/* Left Column */}
