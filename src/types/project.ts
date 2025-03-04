@@ -83,6 +83,7 @@ export type SimpleProjectBase = {
 export type ProjectBase = SimpleProjectBase & {
   tags: PlatformKey[]
   cardDescription: string
+  slug?: string
 }
 
 // Full project data structure for detailed project pages

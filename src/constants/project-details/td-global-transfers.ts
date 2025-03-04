@@ -26,6 +26,7 @@ import tdGlobalFlatlayMobile from '@images/projects/td-global-transfers/flatlay-
 import { ProjectData } from '@/types/project'
 
 const TD_GLOBAL_TRANSFERS: ProjectData = {
+  slug: 'td-global-transfers',
   companyLogoIcon: tdLogo,
   company: 'TD Canada Trust',
   title: 'Global Transfers Case Study',

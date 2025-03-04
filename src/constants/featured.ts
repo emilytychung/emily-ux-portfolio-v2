@@ -10,6 +10,7 @@ export const FEATURED_BASE: ProjectBase[] = [
     cardDescription: TD_GLOBAL_TRANSFERS.cardDescription,
     tags: TD_GLOBAL_TRANSFERS.tags,
     coverImage: TD_GLOBAL_TRANSFERS.coverImage,
+    slug: TD_GLOBAL_TRANSFERS.slug,
   },
   {
     company: 'Solana',
@@ -17,6 +18,7 @@ export const FEATURED_BASE: ProjectBase[] = [
     cardDescription: 'E-commerce platform to register domains on Solana',
     tags: ['desktop'],
     coverImage: solana,
+    slug: 'solana',
   },
   {
     company: 'Mistplay',
@@ -24,5 +26,6 @@ export const FEATURED_BASE: ProjectBase[] = [
     cardDescription: 'Boosting engagement on an advertising gaming app',
     tags: ['android'],
     coverImage: mistplayReferFriends,
+    slug: 'mistplay-refer-friends',
   },
 ] as const
