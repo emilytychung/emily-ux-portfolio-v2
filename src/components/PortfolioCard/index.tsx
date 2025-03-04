@@ -14,7 +14,7 @@ interface PortfolioCardProps extends ProjectBase {
 export default function PortfolioCard({
   company,
   title,
-  description,
+  cardDescription,
   tags,
   coverImage,
   className,
@@ -61,7 +61,7 @@ export default function PortfolioCard({
                 typography.description
               )}
             >
-              {description}
+              {cardDescription}
             </p>
           </div>
           <div

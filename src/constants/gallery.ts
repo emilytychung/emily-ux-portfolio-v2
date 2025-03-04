@@ -12,7 +12,7 @@ export const GALLERY: ProjectBase[] = [
   {
     company: 'TD Canada Trust',
     title: 'Interac e-Transfer',
-    description:
+    cardDescription:
       'Send money across Canada for both personal and business cusotmers',
     tags: ['ios', 'android'],
     coverImage: tdInterac,
@@ -20,14 +20,15 @@ export const GALLERY: ProjectBase[] = [
   {
     company: 'Headquarters',
     title: 'Payroll system',
-    description: 'Allowing companies to transfer and manage payroll directly',
+    cardDescription:
+      'Allowing companies to transfer and manage payroll directly',
     tags: ['desktop'],
     coverImage: headquarters,
   },
   {
     company: 'Canvass AI',
     title: 'ML & AI Platform',
-    description:
+    cardDescription:
       'Allowing manufacturing companies to easily implement into their process',
     tags: ['desktop'],
     coverImage: canvass,
@@ -35,7 +36,8 @@ export const GALLERY: ProjectBase[] = [
   {
     company: 'Mistplay',
     title: 'Design system',
-    description: 'Change from light mode to dark mode with a flip of a switch',
+    cardDescription:
+      'Change from light mode to dark mode with a flip of a switch',
     tags: ['android'],
     coverImage: mistplayDesignSystem,
   },

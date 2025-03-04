@@ -21,9 +21,16 @@ export interface UserPersona {
   imgFile: StaticImageData
 }
 
+export interface HighlightItem {
+  subheader: string
+  description: string
+  imgFile?: StaticImageData
+  iconComponent?: IconComponent
+}
+
 export interface HighlightSection {
   title: string
-  highlights: Highlight[]
+  highlights: HighlightItem[]
   imgFile?: StaticImageData
   videoFile?: StaticImageData
 }
@@ -39,11 +46,10 @@ export interface DescriptionSection {
   description: string
   imgFile?: StaticImageData
   videoFile?: StaticImageData
-  highlights?: Highlight[]
 }
 
 // Union type for all section types
-export type ProcessSection = HighlightSection | UserSection | DescriptionSection
+export type ProcessSection = HighlightSection | DescriptionSection | UserSection
 
 export type Breakpoint = 'mobile' | 'tablet' | 'desktop'
 
@@ -75,7 +81,6 @@ export type SimpleProjectBase = {
 
 // Extended information for project cards
 export type ProjectBase = SimpleProjectBase & {
-  description: string
   tags: PlatformKey[]
   cardDescription: string
 }
@@ -83,17 +88,17 @@ export type ProjectBase = SimpleProjectBase & {
 // Full project data structure for detailed project pages
 export interface ProjectData extends ProjectBase {
   companyLogoIcon: StaticImageData
-  cardDescription: string
+  description: string
   flatlayImages: FlatlayImages
   roles: string[]
   team: string[]
   timeline: string
   summary: SummaryItem[]
   designProcess: {
-    discover?: ProcessSection[]
-    define?: ProcessSection[]
-    explore?: ProcessSection | ProcessSection[]
-    execute?: ProcessSection[]
-    outcomes?: ProcessSection[]
+    discover: HighlightSection[]
+    define: Array<HighlightSection | UserSection>
+    explore: ProcessSection
+    execute: Array<HighlightSection | DescriptionSection>
+    outcomes?: HighlightSection[]
   }
 }
