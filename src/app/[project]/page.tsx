@@ -3,8 +3,10 @@ import { Metadata } from 'next'
 import ProtectedRoute from '@/components/ProtectedRoute'
 import SEO_METADATA from '@/constants/seo-metadata'
 import PROJECT_PARAM_DATA_MAP from '@/constants/project-details'
-import Summary from '@/components/ProjectDetail/Summary'
 import Jumbotron from '@/components/ProjectDetail/Jumbotron'
+import CoverPhoto from '@/components/ProjectDetail/CoverPhoto'
+import Summary from '@/components/ProjectDetail/Summary'
+import Footer from '@/components/Footer'
 
 export async function generateMetadata({
   params,
@@ -43,6 +45,7 @@ export default function ProjectPage({
     team,
     timeline,
     companyLogoIcon,
+    coverImage,
   } = projectData
 
   return (
@@ -58,8 +61,11 @@ export default function ProjectPage({
           timeline={timeline}
           companyLogoIcon={companyLogoIcon}
         />
-        <Summary title={title} description={description} tags={tags} />
+        <CoverPhoto coverImage={coverImage} alt={description} />
+
+        {/* <Summary title={title} description={description} tags={tags} /> */}
       </main>
+      <Footer />
     </ProtectedRoute>
   )
 }

@@ -29,7 +29,7 @@ const TD_GLOBAL_TRANSFERS: ProjectData = {
   title: 'Global Transfers Case Study',
   cardDescription: 'Marketplace to shop rates and send money',
   description:
-    'Empowering over 15M users with seamless international transfers—\n an award-winning redesign for TD Canada Trust.',
+    'Empowering over 15M users with seamless international transfers— an award-winning redesign for TD Canada Trust.',
   tags: ['desktop', 'ios', 'android'],
   coverImage: tdGlobalCover,
   flatlayImage: tdGlobalFlatlay,

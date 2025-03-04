@@ -13,7 +13,6 @@ interface JumbotronProps {
   team: string[]
   timeline: string
   companyLogoIcon: StaticImageData
-  className?: string
 }
 interface KeyHighlightsProps {
   header: string
@@ -44,7 +43,6 @@ export default function Jumbotron({
   team,
   timeline,
   companyLogoIcon,
-  className,
 }: JumbotronProps) {
   const keyHighlights: Array<KeyHighlightsProps> = [
     { header: ROLE_HEADER, content: roles },
@@ -57,8 +55,8 @@ export default function Jumbotron({
       as="section"
       className={cn(
         'flex flex-col items-center px-4 pb-0 pt-32',
-        'sm:px-16 md:px-32 lg:px-32',
-        className
+        'sm:px-16 md:px-32 lg:px-16',
+        'md:max-w-[1184px]'
       )}
     >
       <div className="flex flex-col items-center gap-10">
