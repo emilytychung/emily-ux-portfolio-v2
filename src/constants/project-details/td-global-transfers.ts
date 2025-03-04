@@ -7,6 +7,7 @@ import {
   SparkleIcon,
 } from '@/components/Icons'
 import cafeHopping from '@images/polaroids/cafe.png'
+import tdLogo from '@images/logo/td.png'
 import tdGlobalCover from '@images/projects/td-global-transfers/cover.png'
 import tdGlobalSummary1 from '@images/projects/td-global-transfers/summary1.png'
 import tdGlobalSummary2 from '@images/projects/td-global-transfers/summary2.png'
@@ -23,6 +24,7 @@ import tdGlobalFlatlay from '@images/projects/td-global-transfers/flatlay.png'
 import { ProjectData } from '@/types/project'
 
 const TD_GLOBAL_TRANSFERS: ProjectData = {
+  companyLogoIcon: tdLogo,
   company: 'TD Canada Trust',
   title: 'Global Transfers Case Study',
   cardDescription: 'Marketplace to shop rates and send money',

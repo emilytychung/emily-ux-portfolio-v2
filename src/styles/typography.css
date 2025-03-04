@@ -6,6 +6,10 @@
     @apply font-geist text-sm uppercase leading-[170%] tracking-wide sm:text-base sm:leading-[200%];
   }
 
+  .text-label-md {
+    @apply font-geist text-[16px] uppercase leading-[170%] tracking-wide sm:text-base sm:leading-[200%];
+  }
+
   /* Body Text */
   .text-body {
     @apply font-hauora text-base leading-[150%];

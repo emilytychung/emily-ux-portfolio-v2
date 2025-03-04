@@ -73,12 +73,13 @@ export type SimpleProjectBase = {
 export type ProjectBase = SimpleProjectBase & {
   description: string
   tags: PlatformKey[]
-  cardDescription?: string
+  cardDescription: string
 }
 
 // Full project data structure for detailed project pages
 export interface ProjectData extends ProjectBase {
-  cardDescription: string // Making this required in ProjectData
+  companyLogoIcon: StaticImageData
+  cardDescription: string
   flatlayImage?: StaticImageData
   roles: string[]
   team: string[]

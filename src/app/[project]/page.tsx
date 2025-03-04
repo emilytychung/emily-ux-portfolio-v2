@@ -3,6 +3,8 @@ import { Metadata } from 'next'
 import ProtectedRoute from '@/components/ProtectedRoute'
 import SEO_METADATA from '@/constants/seo-metadata'
 import PROJECT_PARAM_DATA_MAP from '@/constants/project-details'
+import Summary from '@/components/ProjectDetail/Summary'
+import Jumbotron from '@/components/ProjectDetail/Jumbotron'
 
 export async function generateMetadata({
   params,
@@ -32,9 +34,32 @@ export default function ProjectPage({
     notFound()
   }
 
+  const {
+    company,
+    title,
+    description,
+    tags,
+    roles,
+    team,
+    timeline,
+    companyLogoIcon,
+  } = projectData
+
   return (
     <ProtectedRoute>
-      <main></main>
+      <main>
+        <Jumbotron
+          company={company}
+          title={title}
+          description={description}
+          tags={tags}
+          roles={roles}
+          team={team}
+          timeline={timeline}
+          companyLogoIcon={companyLogoIcon}
+        />
+        <Summary title={title} description={description} tags={tags} />
+      </main>
     </ProtectedRoute>
   )
 }
