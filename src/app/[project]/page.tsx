@@ -7,6 +7,7 @@ import Jumbotron from '@/components/ProjectDetail/Jumbotron'
 import CoverPhoto from '@/components/ProjectDetail/CoverPhoto'
 import Summary from '@/components/ProjectDetail/Summary'
 import Footer from '@/components/Footer'
+import FlatlayPhoto from '@/components/ProjectDetail/FlatlayPhoto'
 
 export async function generateMetadata({
   params,
@@ -47,6 +48,7 @@ export default function ProjectPage({
     companyLogoIcon,
     coverImage,
     summary,
+    flatlayImages,
   } = projectData
 
   return (
@@ -64,6 +66,7 @@ export default function ProjectPage({
         />
         <CoverPhoto coverImage={coverImage} alt={description} />
         <Summary summary={summary} />
+        <FlatlayPhoto title={title} flatlayImages={flatlayImages} />
       </main>
       <Footer />
     </ProtectedRoute>

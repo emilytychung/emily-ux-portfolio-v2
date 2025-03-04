@@ -45,6 +45,10 @@ export interface DescriptionSection {
 // Union type for all section types
 export type ProcessSection = HighlightSection | UserSection | DescriptionSection
 
+export type Breakpoint = 'mobile' | 'tablet' | 'desktop'
+
+export type FlatlayImages = Record<Breakpoint, StaticImageData>
+
 // Type guard functions to narrow types
 export function isHighlightSection(
   section: ProcessSection
@@ -80,7 +84,7 @@ export type ProjectBase = SimpleProjectBase & {
 export interface ProjectData extends ProjectBase {
   companyLogoIcon: StaticImageData
   cardDescription: string
-  flatlayImage?: StaticImageData
+  flatlayImages: FlatlayImages
   roles: string[]
   team: string[]
   timeline: string

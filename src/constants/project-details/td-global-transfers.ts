@@ -20,7 +20,9 @@ import tdGlobalUser2 from '@images/projects/td-global-transfers/user2.png'
 import tdGlobalExecute2 from '@images/projects/td-global-transfers/execute2.png'
 import tdGlobalExecute31 from '@images/projects/td-global-transfers/execute3-1.png'
 import tdGlobalExecute32 from '@images/projects/td-global-transfers/execute3-2.png'
-import tdGlobalFlatlay from '@images/projects/td-global-transfers/flatlay.png'
+import tdGlobalFlatlayDesktop from '@images/projects/td-global-transfers/flatlay-desktop.png'
+import tdGlobalFlatlayTablet from '@images/projects/td-global-transfers/flatlay-tablet.png'
+import tdGlobalFlatlayMobile from '@images/projects/td-global-transfers/flatlay-mobile.png'
 import { ProjectData } from '@/types/project'
 
 const TD_GLOBAL_TRANSFERS: ProjectData = {
@@ -32,7 +34,11 @@ const TD_GLOBAL_TRANSFERS: ProjectData = {
     'Empowering over 15M users with seamless international transfers— an award-winning redesign for TD Canada Trust.',
   tags: ['desktop', 'ios', 'android'],
   coverImage: tdGlobalCover,
-  flatlayImage: tdGlobalFlatlay,
+  flatlayImages: {
+    desktop: tdGlobalFlatlayDesktop,
+    tablet: tdGlobalFlatlayTablet,
+    mobile: tdGlobalFlatlayMobile,
+  },
   roles: [
     'Product designer',
     'Design systems',
