@@ -46,6 +46,7 @@ export default function ProjectPage({
     timeline,
     companyLogoIcon,
     coverImage,
+    summary,
   } = projectData
 
   return (
@@ -62,8 +63,7 @@ export default function ProjectPage({
           companyLogoIcon={companyLogoIcon}
         />
         <CoverPhoto coverImage={coverImage} alt={description} />
-
-        {/* <Summary title={title} description={description} tags={tags} /> */}
+        <Summary summary={summary} />
       </main>
       <Footer />
     </ProtectedRoute>

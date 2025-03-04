@@ -25,7 +25,7 @@ export default function SectionHeader({
       <span
         className={cn(
           // Mobile
-          'w-full text-center font-geist text-sm uppercase tracking-wide text-blue-primary',
+          'w-full text-center font-geist text-xs uppercase tracking-wide text-blue-primary',
           // Tablet & up
           'sm:text-base sm:leading-9',
           // Desktop & ultrawide

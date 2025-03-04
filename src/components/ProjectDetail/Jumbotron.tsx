@@ -26,7 +26,7 @@ const TIMELINE_HEADER = 'TIMELINE'
 const KeyHighlights = ({ header, content }: KeyHighlightsProps) => (
   <div className="flex flex-col gap-2">
     <h2 className="text-label-md mb-0 text-blue-primary">{header}</h2>
-    <div className="font-inter text-[16px] leading-[160%] text-slate-900 sm:text-base">
+    <div className="font-inter text-sm leading-[160%] text-slate-900 sm:text-base">
       {header === TIMELINE_HEADER
         ? content
         : (content as string[]).map((item, index) => <p key={index}>{item}</p>)}
@@ -67,7 +67,7 @@ export default function Jumbotron({
           <h1 className="text-heading-large text-center text-slate-700">
             {title}
           </h1>
-          <p className="whitespace-pre-line text-center font-inter text-[16px] leading-[140%] text-slate-600 sm:text-[22px] md:text-[28px]">
+          <p className="whitespace-pre-line text-center font-inter text-sm leading-[140%] text-slate-600 sm:text-[22px] md:text-[28px]">
             {description}
           </p>
 

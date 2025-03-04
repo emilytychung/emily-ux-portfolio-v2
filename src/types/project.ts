@@ -4,7 +4,7 @@ import { PlatformKey } from './platforms'
 
 export type IconComponent = FC<SVGProps<SVGSVGElement>>
 
-export interface Highlight {
+export interface SummaryItem {
   subheader: string
   description: string
   iconComponent?: IconComponent
@@ -84,7 +84,7 @@ export interface ProjectData extends ProjectBase {
   roles: string[]
   team: string[]
   timeline: string
-  summary?: Highlight[]
+  summary: SummaryItem[]
   designProcess: {
     discover?: ProcessSection[]
     define?: ProcessSection[]
