@@ -1,4 +1,3 @@
-import { type FC } from 'react'
 import cn from '@/lib/utils/cn'
 import { SectionHeaderMap } from '@/constants/sections'
 
@@ -23,7 +22,6 @@ export default function SectionHeader({
         className
       )}
     >
-      {/* Label text */}
       <span
         className={cn(
           // Mobile
@@ -36,7 +34,6 @@ export default function SectionHeader({
       >
         {labelText}
       </span>
-      {/* Heading */}
       <h2
         className={cn(
           // Mobile

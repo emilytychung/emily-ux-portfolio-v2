@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import { BriefcaseIcon, UserIcon } from './Icons'
-import Button from '@/components/Button'
 
 export const HOME_MENU_ITEMS = [
   { href: '#work', label: 'Work', icon: <BriefcaseIcon /> },

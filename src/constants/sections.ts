@@ -1,10 +1,10 @@
+import { SectionKey } from '@/types/sections'
+
 export interface SectionHeaderMap {
   labelText: string
   headingText: string
   id?: string
 }
-
-export type SectionKey = 'featured' | 'gallery' | 'testimonials' | 'about'
 
 export const SECTION_HEADERS: Record<SectionKey, SectionHeaderMap> = {
   featured: {

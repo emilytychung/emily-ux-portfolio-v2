@@ -1,21 +1,14 @@
-import { StaticImageData } from 'next/image'
-import { CaseStudyBase } from './featured'
-import tdInterac from '@images/case-studies/td-interac/cover.png'
-import headquarters from '@images/case-studies/headquarters/cover.png'
-import canvass from '@images/case-studies/canvass/cover.png'
-import mistplayDesignSystem from '@images/case-studies/mistplay-design-system/cover.png'
-import mistplayIllustrations from '@images/case-studies/mistplay-illustrations/cover.png'
-import ribbon from '@images/case-studies/ribbon/cover.png'
-import avantis from '@images/case-studies/avantis/cover.png'
-import uniswap from '@images/case-studies/uniswap/cover.png'
+import tdInterac from '@images/projects/td-interac/cover.png'
+import headquarters from '@images/projects/headquarters/cover.png'
+import canvass from '@images/projects/canvass/cover.png'
+import mistplayDesignSystem from '@images/projects/mistplay-design-system/cover.png'
+import mistplayIllustrations from '@images/projects/mistplay-illustrations/cover.png'
+import ribbon from '@images/projects/ribbon/cover.png'
+import avantis from '@images/projects/avantis/cover.png'
+import uniswap from '@images/projects/uniswap/cover.png'
+import { ProjectBase, SimpleProjectBase } from '@/types/project'
 
-export type SimpleCaseStudyBase = {
-  company: string
-  title: string
-  coverImage: StaticImageData
-}
-
-export const GALLERY: CaseStudyBase[] = [
+export const GALLERY: ProjectBase[] = [
   {
     company: 'TD Canada Trust',
     title: 'Interac e-Transfer',
@@ -48,7 +41,7 @@ export const GALLERY: CaseStudyBase[] = [
   },
 ] as const
 
-export const SIMPLE_GALLERY: SimpleCaseStudyBase[] = [
+export const SIMPLE_GALLERY: SimpleProjectBase[] = [
   {
     company: 'Ribbon',
     title: 'HR Software Tool',

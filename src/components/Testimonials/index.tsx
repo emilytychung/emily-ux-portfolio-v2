@@ -1,9 +1,8 @@
+import Container from '@/components/Container'
 import Card from '@/components/Testimonials/Card'
 import SectionHeader from '@/components/SectionHeader'
 import { SECTION_HEADERS } from '@/constants/sections'
 import { TESTIMONIALS } from '@/constants/testimonials'
-import cn from '@/lib/utils/cn'
-import Container from '../Container'
 
 export default function Testimonials() {
   return (

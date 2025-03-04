@@ -7,19 +7,22 @@ import {
   SparkleIcon,
 } from '@/components/Icons'
 import cafeHopping from '@images/polaroids/cafe.png'
-import tdGlobalCover from '@images/case-studies/td-global-transfers/cover.png'
-import tdGlobalSummary1 from '@images/case-studies/td-global-transfers/summary1.png'
-import tdGlobalDiscover21 from '@images/case-studies/td-global-transfers/discover2-1.png'
-import tdGlobalDiscover22 from '@images/case-studies/td-global-transfers/discover2-2.png'
-import tdGlobalDiscover23 from '@images/case-studies/td-global-transfers/discover2-3.png'
-import tdGlobalUser1 from '@images/case-studies/td-global-transfers/user1.png'
-import tdGlobalUser2 from '@images/case-studies/td-global-transfers/user2.png'
-import tdGlobalExecute2 from '@images/case-studies/td-global-transfers/execute2.png'
-import tdGlobalExecute31 from '@images/case-studies/td-global-transfers/execute3-1.png'
-import tdGlobalExecute32 from '@images/case-studies/td-global-transfers/execute3-2.png'
-import tdGlobalFlatlay from '@images/case-studies/td-global-transfers/flatlay.png'
+import tdGlobalCover from '@images/projects/td-global-transfers/cover.png'
+import tdGlobalSummary1 from '@images/projects/td-global-transfers/summary1.png'
+import tdGlobalSummary2 from '@images/projects/td-global-transfers/summary2.png'
+import tdGlobalSummary3 from '@images/projects/td-global-transfers/summary3.png'
+import tdGlobalDiscover21 from '@images/projects/td-global-transfers/discover2-1.png'
+import tdGlobalDiscover22 from '@images/projects/td-global-transfers/discover2-2.png'
+import tdGlobalDiscover23 from '@images/projects/td-global-transfers/discover2-3.png'
+import tdGlobalUser1 from '@images/projects/td-global-transfers/user1.png'
+import tdGlobalUser2 from '@images/projects/td-global-transfers/user2.png'
+import tdGlobalExecute2 from '@images/projects/td-global-transfers/execute2.png'
+import tdGlobalExecute31 from '@images/projects/td-global-transfers/execute3-1.png'
+import tdGlobalExecute32 from '@images/projects/td-global-transfers/execute3-2.png'
+import tdGlobalFlatlay from '@images/projects/td-global-transfers/flatlay.png'
+import { ProjectData } from '@/types/project'
 
-const TD_GLOBAL_TRANSFERS = {
+const TD_GLOBAL_TRANSFERS: ProjectData = {
   company: 'TD Canada Trust',
   title: 'Global Transfers Case Study',
   cardDescription: 'Marketplace to shop rates and send money',
@@ -296,3 +299,5 @@ const TD_GLOBAL_TRANSFERS = {
     ],
   },
 }
+
+export default TD_GLOBAL_TRANSFERS

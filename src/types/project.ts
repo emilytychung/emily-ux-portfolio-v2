@@ -1,5 +1,6 @@
 import { StaticImageData } from 'next/image'
 import { FC, SVGProps } from 'react'
+import { PlatformKey } from './platforms'
 
 export type IconComponent = FC<SVGProps<SVGSVGElement>>
 
@@ -61,16 +62,23 @@ export function isDescriptionSection(
   return 'description' in section
 }
 
-export type PlatformType = 'desktop' | 'ios' | 'android' | string
-
-// Full project data structure
-export interface ProjectData {
+// Most minimal project information
+export type SimpleProjectBase = {
   company: string
   title: string
-  cardDescription: string
-  description: string
-  tags: PlatformType[]
   coverImage: StaticImageData
+}
+
+// Extended information for project cards
+export type ProjectBase = SimpleProjectBase & {
+  description: string
+  tags: PlatformKey[]
+  cardDescription?: string
+}
+
+// Full project data structure for detailed project pages
+export interface ProjectData extends ProjectBase {
+  cardDescription: string // Making this required in ProjectData
   flatlayImage?: StaticImageData
   roles: string[]
   team: string[]

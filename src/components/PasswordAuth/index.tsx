@@ -5,8 +5,7 @@ import { PASSWORD_EMAIL, EMAIL } from '@/constants/contact'
 import Button from '@/components/Button'
 import PasswordInput from './PasswordInput'
 import { useState } from 'react'
-import LockIcon from './LockIcon'
-import { useEnvValidation } from '@/lib/hooks/useEnvValidation'
+import { LockIcon } from './Icons'
 import { useAuth } from '@/lib/hooks/useAuth'
 
 // Access environment variable

@@ -1,9 +1,9 @@
 import Image from 'next/image'
 import cn from '@/lib/utils/cn'
-import { type SimpleCaseStudy } from '@/constants/gallery'
 import { textStyles } from './styles'
+import { SimpleProjectBase } from '@/types/project'
 
-interface SimplePortfolioCardProps extends SimpleCaseStudy {
+interface SimplePortfolioCardProps extends SimpleProjectBase {
   className?: string
 }
 
