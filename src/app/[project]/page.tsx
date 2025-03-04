@@ -9,12 +9,15 @@ import Summary from '@/components/ProjectDetail/Summary'
 import Footer from '@/components/Footer'
 import FlatlayPhoto from '@/components/ProjectDetail/FlatlayPhoto'
 
+interface ProjectPageProps {
+  params: Promise<{ project: string }>
+}
+
 export async function generateMetadata({
   params,
-}: {
-  params: { project: string }
-}): Promise<Metadata> {
-  const projectData = PROJECT_PARAM_DATA_MAP[params.project]
+}: ProjectPageProps): Promise<Metadata> {
+  const { project } = await params
+  const projectData = PROJECT_PARAM_DATA_MAP[project]
 
   return {
     title: `${SEO_METADATA.title} | ${projectData.company} | ${projectData.title}`,
@@ -26,12 +29,9 @@ export function generateStaticParams() {
   return Object.keys(PROJECT_PARAM_DATA_MAP).map((project) => ({ project }))
 }
 
-export default function ProjectPage({
-  params,
-}: {
-  params: { project: string }
-}) {
-  const projectData = PROJECT_PARAM_DATA_MAP[params.project]
+export default async function ProjectPage({ params }: ProjectPageProps) {
+  const { project } = await params
+  const projectData = PROJECT_PARAM_DATA_MAP[project]
 
   if (!projectData) {
     notFound()
