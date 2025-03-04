@@ -2,7 +2,7 @@ import { ProjectData } from '@/types/project'
 import TD_GLOBAL_TRANSFERS from '@/constants/project-details/td-global-transfers'
 
 const PROJECT_PARAM_DATA_MAP: Record<string, ProjectData> = {
-  [TD_GLOBAL_TRANSFERS.slug]: TD_GLOBAL_TRANSFERS,
+  [TD_GLOBAL_TRANSFERS.slug as string]: TD_GLOBAL_TRANSFERS,
   solana: TD_GLOBAL_TRANSFERS,
   'mistplay-refer-friends': TD_GLOBAL_TRANSFERS,
 }
