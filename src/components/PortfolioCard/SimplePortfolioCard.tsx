@@ -1,9 +1,9 @@
 import Image from 'next/image'
 import cn from '@/lib/utils/cn'
-import { type SimpleCaseStudy } from '@/constants/gallery'
 import { textStyles } from './styles'
+import { SimpleProjectBase } from '@/types/project'
 
-interface SimplePortfolioCardProps extends SimpleCaseStudy {
+interface SimplePortfolioCardProps extends SimpleProjectBase {
   className?: string
 }
 
@@ -25,7 +25,7 @@ export default function SimplePortfolioCard({
         className
       )}
       role="article"
-      aria-labelledby="case-study-title"
+      aria-labelledby="project-title-title"
     >
       <div className="flex flex-col overflow-hidden rounded-[32px] border border-slate-100 bg-gradient-to-tr from-[#f8f8f8] to-slate-50">
         <div className="flex w-full flex-col justify-between px-6 py-8 pb-4 sm:p-14 sm:pb-8">

@@ -1,5 +1,5 @@
 .text-footer-title {
-  @apply font-geist text-sm uppercase leading-[170%] tracking-wide text-white sm:text-base sm:leading-[200%];
+  @apply font-geist text-xs uppercase leading-[170%] tracking-wide text-white sm:text-base sm:leading-[200%];
 }
 
 .text-footer-email {
@@ -10,5 +10,5 @@
 }
 
 .text-footer-copyright {
-  @apply font-geist text-sm uppercase leading-4 tracking-wide;
+  @apply font-geist text-xs uppercase leading-4 tracking-wide;
 }

@@ -3,6 +3,10 @@
 @layer components {
   /* Label Text - Mono */
   .text-label {
+    @apply font-geist text-xs uppercase leading-[170%] tracking-wide sm:text-base sm:leading-[200%];
+  }
+
+  .text-label-md {
     @apply font-geist text-sm uppercase leading-[170%] tracking-wide sm:text-base sm:leading-[200%];
   }
 
@@ -14,6 +18,10 @@
   /* Small Headings */
   .text-heading-small {
     @apply font-hauora text-lg font-semibold leading-[130%] tracking-tight sm:text-2xl;
+  }
+
+  .text-heading-sm {
+    @apply font-hauora text-base font-semibold leading-[130%] tracking-tight sm:text-[24px];
   }
 
   /* Medium Headings */

@@ -1,3 +1,5 @@
+import { LogoData } from '@/types/jumbotron'
+
 export const JUMBOTRON_CONTENT = {
   greeting: "Hi, I'm Emily",
   role: 'Product designer',
@@ -26,14 +28,6 @@ export const JUMBOTRON_CONTENT = {
   },
   projectsLabel: '50+ PROJECTS INCLUDING',
 } as const
-
-type LogoData = {
-  name: string
-  src: string
-  alt: string
-  width: number
-  height: number
-}
 
 export const LOGO_DATA: LogoData[] = [
   {

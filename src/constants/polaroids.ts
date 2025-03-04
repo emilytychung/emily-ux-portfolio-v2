@@ -1,24 +1,9 @@
-import type { StaticImageData } from 'next/image'
 import pebbles from '@images/polaroids/pebbles.png'
 import travelling from '@images/polaroids/travelling.png'
 import cooking from '@images/polaroids/cooking.png'
 import cafeHopping from '@images/polaroids/cafe.png'
 import hikingInPeru from '@images/polaroids/hiking.png'
-
-type Breakpoint = 'mobile' | 'tablet' | 'desktop' | 'ultrawide'
-
-interface Position {
-  top: string
-  left: string
-}
-
-interface PolaroidData {
-  imgFile: StaticImageData
-  title: string
-  rotations: Record<Breakpoint, number>
-  position: Record<Breakpoint, Position>
-  zIndex: number
-}
+import { PolaroidData } from '@/types/polaroid'
 
 export const POLAROID_DATA: PolaroidData[] = [
   {

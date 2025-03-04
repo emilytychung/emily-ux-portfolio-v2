@@ -1,12 +1,12 @@
 import Image from 'next/image'
 import cn from '@/lib/utils/cn'
-import { type CaseStudy } from '@/constants/featured'
 import { getPlatformDisplay } from '@/constants/platforms'
 import { textStyles } from './styles'
+import { ProjectBase } from '@/types/project'
 
 export type PortfolioSection = 'featured' | 'gallery'
 
-interface PortfolioCardProps extends CaseStudy {
+interface PortfolioCardProps extends ProjectBase {
   className?: string
   section: PortfolioSection
 }
@@ -14,7 +14,7 @@ interface PortfolioCardProps extends CaseStudy {
 export default function PortfolioCard({
   company,
   title,
-  description,
+  cardDescription,
   tags,
   coverImage,
   className,
@@ -32,7 +32,7 @@ export default function PortfolioCard({
         className
       )}
       role="article"
-      aria-labelledby="case-study-title"
+      aria-labelledby="project-title-title"
     >
       <div className="flex flex-col justify-between overflow-hidden rounded-[32px] border border-slate-100 bg-gradient-to-tr from-[#f8f8f8] to-slate-50 md:flex-row md:gap-10">
         {/* Left Column */}
@@ -61,7 +61,7 @@ export default function PortfolioCard({
                 typography.description
               )}
             >
-              {description}
+              {cardDescription}
             </p>
           </div>
           <div

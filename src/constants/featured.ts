@@ -1,39 +1,31 @@
-import { PlatformKey } from './platforms'
-import tdGlobalTransfers from '@images/case-studies/td-global-transfers/cover.png'
-import solana from '@images/case-studies/solana/cover.png'
-import mistplayReferFriends from '@images/case-studies/mistplay-refer-friends/cover.png'
-import { StaticImageData } from 'next/image'
+import { ProjectBase } from '@/types/project'
+import TD_GLOBAL_TRANSFERS from '@/constants/project-details/td-global-transfers'
+import solana from '@images/projects/solana/cover.png'
+import mistplayReferFriends from '@images/projects/mistplay-refer-friends/cover.png'
 
-export type CaseStudy = {
-  company: string
-  title: string
-  description: string
-  tags: PlatformKey[]
-  coverImage: StaticImageData
-}
-
-export const FEATURED: CaseStudy[] = [
+export const FEATURED_BASE: ProjectBase[] = [
   {
-    company: 'TD Canada Trust',
-    title: 'Global Transfers Case Study',
-    description: 'Marketplace to shop rates and send money',
-    tags: ['desktop', 'ios', 'android'],
-    coverImage: tdGlobalTransfers,
+    company: TD_GLOBAL_TRANSFERS.company,
+    title: TD_GLOBAL_TRANSFERS.title,
+    cardDescription: TD_GLOBAL_TRANSFERS.cardDescription,
+    tags: TD_GLOBAL_TRANSFERS.tags,
+    coverImage: TD_GLOBAL_TRANSFERS.coverImage,
+    slug: TD_GLOBAL_TRANSFERS.slug,
   },
   {
     company: 'Solana',
     title: 'Name Service Case Study',
-    description: 'E-commerce platform to register domains on Solana',
+    cardDescription: 'E-commerce platform to register domains on Solana',
     tags: ['desktop'],
     coverImage: solana,
+    slug: 'solana',
   },
   {
     company: 'Mistplay',
     title: 'Refer Friends Case Study',
-    description: 'Boosting engagement on an advertising gaming app',
+    cardDescription: 'Boosting engagement on an advertising gaming app',
     tags: ['android'],
     coverImage: mistplayReferFriends,
+    slug: 'mistplay-refer-friends',
   },
 ] as const
-
-export type CaseStudyData = (typeof FEATURED)[number]

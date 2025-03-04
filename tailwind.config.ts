@@ -21,7 +21,8 @@ export default {
         awesome: ['Font Awesome 6 Pro'],
       },
       fontSize: {
-        sm: ['12px', '170%'],
+        xs: ['12px', '170%'],
+        sm: ['16px', '150%'],
         base: ['18px', '150%'],
         lg: ['20px', '130%'],
         xl: ['28px', '150%'],

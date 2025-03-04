@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import cn from '@/lib/utils/cn'
 import { JUMBOTRON_CONTENT, LOGO_DATA } from '@/constants/jumbotron'
-import Container from './Container'
+import Container from '@/components/Container'
 
 export default function Jumbotron() {
   const renderTagline = () => (
@@ -59,7 +59,7 @@ export default function Jumbotron() {
           'gap-4 md:gap-0'
         )}
       >
-        <p className="border-base-200 text-center font-geist text-sm text-slate-500 md:border-r md:px-8 md:text-left">
+        <p className="border-base-200 text-center font-geist text-xs text-slate-500 md:border-r md:px-8 md:text-left">
           {JUMBOTRON_CONTENT.projectsLabel}
         </p>
         <div

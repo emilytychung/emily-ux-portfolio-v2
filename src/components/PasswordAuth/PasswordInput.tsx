@@ -1,5 +1,5 @@
 import cn from '@/lib/utils/cn'
-import ErrorIcon from './ErrorIcon'
+import { ErrorIcon } from './Icons'
 
 interface PasswordInputProps {
   value: string

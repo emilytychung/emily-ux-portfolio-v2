@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import { BriefcaseIcon, UserIcon } from './Icons'
-import Button from '@/components/Button'
 
 export const HOME_MENU_ITEMS = [
   { href: '#work', label: 'Work', icon: <BriefcaseIcon /> },
@@ -23,7 +22,7 @@ export const DesktopMenuItems = ({
       aria-label={`View ${label}`}
     >
       {icon}
-      <span className="text-[16px] font-semibold text-slate-700">{label}</span>
+      <span className="text-sm font-semibold text-slate-700">{label}</span>
     </Link>
   )
 }
@@ -47,7 +46,7 @@ export const MobileMenuItems = ({
       onClick={onClick}
     >
       {icon}
-      <span className="text-[16px] font-semibold text-slate-700">{label}</span>
+      <span className="text-sm font-semibold text-slate-700">{label}</span>
     </Link>
   )
 }

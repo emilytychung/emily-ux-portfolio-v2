@@ -49,7 +49,7 @@ export default function Testimonial({
         <h3
           className={cn(
             'font-inter font-semibold',
-            'text-sm leading-[130%] text-[#202939]',
+            'text-xs leading-[130%] text-[#202939]',
             'sm:text-lg'
           )}
         >
@@ -58,7 +58,7 @@ export default function Testimonial({
         <p
           className={cn(
             'font-inter font-medium',
-            'text-sm leading-[130%] text-[#697586]',
+            'text-xs leading-[130%] text-[#697586]',
             'sm:text-lg'
           )}
         >
@@ -68,7 +68,7 @@ export default function Testimonial({
       <p
         className={cn(
           'font-inter font-normal',
-          'text-sm leading-[140%] text-[#202939]',
+          'text-xs leading-[140%] text-[#202939]',
           'sm:text-lg'
         )}
       >

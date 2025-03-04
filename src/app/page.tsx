@@ -11,11 +11,13 @@ export default function Home() {
   return (
     <ProtectedRoute>
       <NavBar />
-      <Jumbotron />
-      <Featured />
-      <Gallery />
-      <Testimonials />
-      <About />
+      <main>
+        <Jumbotron />
+        <Featured />
+        <Gallery />
+        <Testimonials />
+        <About />
+      </main>
       <Footer />
     </ProtectedRoute>
   )
