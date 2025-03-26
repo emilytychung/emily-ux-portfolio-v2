@@ -1,9 +1,9 @@
 import { PlatformKey, PlatformValue } from '@/types/platforms'
 
 export const PLATFORMS = {
-  desktop: 'Desktop',
-  ios: 'iOS',
-  android: 'Android',
+  desktop: 'DESKTOP',
+  ios: 'IOS',
+  android: 'ANDROID',
 } as const
 
 export function getPlatformDisplay(platform: PlatformKey): PlatformValue {

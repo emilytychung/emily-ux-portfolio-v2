@@ -77,7 +77,7 @@ export default function PortfolioCard({
               >
                 <span
                   className={cn(
-                    'font-geist text-[11px] text-blue-primary',
+                    'font-geist text-[11px] uppercase text-blue-primary',
                     typography.tags
                   )}
                 >
