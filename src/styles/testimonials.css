@@ -2,7 +2,7 @@
 
 @layer components {
   .testimonials-background {
-    @apply relative;
+    @apply relative overflow-hidden;
   }
 
   .testimonials-background::after {

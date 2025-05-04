@@ -2,7 +2,7 @@
 
 @layer components {
   .featured-background {
-    @apply relative;
+    @apply relative overflow-hidden;
   }
 
   .featured-background::before {
