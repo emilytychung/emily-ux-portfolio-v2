@@ -3,10 +3,11 @@ import Card from '@/components/Testimonials/Card'
 import SectionHeader from '@/components/SectionHeader'
 import { SECTION_HEADERS } from '@/constants/sections'
 import { TESTIMONIALS } from '@/constants/testimonials'
+import '@/styles/testimonials.css'
 
 export default function Testimonials() {
   return (
-    <Container as="section">
+    <Container as="section" className="testimonials-background">
       <SectionHeader sectionHeaderMap={SECTION_HEADERS.testimonials} />
       <div className="grid grid-cols-1 gap-4 sm:gap-8 md:grid-cols-2">
         {TESTIMONIALS.map(({ imageUrl, name, title, testimonial }) => (

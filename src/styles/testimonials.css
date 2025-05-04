@@ -1,0 +1,55 @@
+@tailwind components;
+
+@layer components {
+  .testimonials-background {
+    @apply relative;
+  }
+
+  .testimonials-background::after {
+    content: '';
+    position: absolute;
+    width: 869px;
+    height: 1221px;
+    top: -20%;
+    left: 90%;
+    background-image: radial-gradient(
+        circle 3px at center,
+        #ccd5df 3px,
+        transparent 3px
+      ),
+      radial-gradient(circle 3px at center, #ccd5df 3px, transparent 3px),
+      radial-gradient(
+        37.49% 48.04% at 50% 50%,
+        #ccd5df 0%,
+        rgba(75, 85, 101, 0) 100%
+      );
+    background-size:
+      20px 20px,
+      20px 20px,
+      100% 100%,
+      100% 100%;
+    background-position:
+      0 0,
+      10px 10px,
+      center center,
+      center center;
+    mask-image: radial-gradient(black 50%, transparent 60%);
+    -webkit-mask-image: radial-gradient(black 50%, transparent 60%);
+    opacity: 0.3;
+    z-index: -10;
+    transform: rotate(71.48deg);
+    pointer-events: none;
+  }
+
+  @media (min-width: 900px) {
+    .testimonials-background::after {
+      right: calc(-64px - (100vw - 1440px) / 2);
+    }
+  }
+
+  @media (min-width: 481px) and (max-width: 899px) {
+    .testimonials-background::after {
+      right: calc(-32px - (100vw - 100%) / 2);
+    }
+  }
+}
