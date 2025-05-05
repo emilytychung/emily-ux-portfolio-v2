@@ -1,6 +1,6 @@
 import Container from '@/components/Container'
 import SectionHeader from '@/components/SectionHeader'
-import { SECTION_HEADERS } from '@/constants/sections'
+import { HOME_SECTION_HEADERS } from '@/constants/sections'
 import PortfolioCard from '@/components/PortfolioCard'
 import SimplePortfolioCard from '@/components/PortfolioCard/SimplePortfolioCard'
 import { GALLERY, SIMPLE_GALLERY } from '@/constants/gallery'
@@ -8,7 +8,7 @@ import { GALLERY, SIMPLE_GALLERY } from '@/constants/gallery'
 export default function Gallery() {
   return (
     <Container as="section">
-      <SectionHeader sectionHeaderMap={SECTION_HEADERS.gallery} />
+      <SectionHeader sectionHeaderMap={HOME_SECTION_HEADERS.gallery} />
       <div className="flex flex-col gap-4 sm:gap-6">
         {GALLERY.map(
           ({ company, title, cardDescription, tags, coverImage }) => (

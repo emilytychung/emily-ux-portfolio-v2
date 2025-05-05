@@ -1,12 +1,12 @@
 import { SectionKey } from '@/types/sections'
 
 export interface SectionHeaderMap {
-  labelText: string
+  labelText?: string
   headingText: string
   id?: string
 }
 
-export const SECTION_HEADERS: Record<SectionKey, SectionHeaderMap> = {
+export const HOME_SECTION_HEADERS: Record<SectionKey, SectionHeaderMap> = {
   featured: {
     labelText: 'Featured case studies',
     headingText: 'From concept to design',
