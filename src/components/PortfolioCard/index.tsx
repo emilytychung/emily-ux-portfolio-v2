@@ -1,8 +1,8 @@
 import Image from 'next/image'
 import cn from '@/lib/utils/cn'
-import { getPlatformDisplay } from '@/constants/platforms'
 import { textStyles } from './styles'
 import { ProjectBase } from '@/types/project'
+import Tag from '@/components/Tag'
 
 export type PortfolioSection = 'featured' | 'gallery'
 
@@ -70,20 +70,7 @@ export default function PortfolioCard({
             aria-label="Platforms"
           >
             {tags.map((tag) => (
-              <div
-                key={tag}
-                role="listitem"
-                className="flex items-center rounded-button border-2 border-blue-primary px-3 py-0.5"
-              >
-                <span
-                  className={cn(
-                    'font-geist text-[11px] uppercase text-blue-primary',
-                    typography.tags
-                  )}
-                >
-                  {getPlatformDisplay(tag)}
-                </span>
-              </div>
+              <Tag key={tag} platform={tag} size={typography.tagSize} />
             ))}
           </div>
         </div>
