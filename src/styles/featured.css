@@ -1,0 +1,97 @@
+@tailwind components;
+
+@layer components {
+  .featured-background {
+    @apply relative overflow-hidden;
+  }
+
+  .featured-background::before {
+    content: '';
+    position: absolute;
+    width: 869px;
+    height: 1221px;
+    top: -10%;
+    left: 0;
+    background-image: radial-gradient(
+        circle 3px at center,
+        #ccd5df 3px,
+        transparent 3px
+      ),
+      radial-gradient(circle 3px at center, #ccd5df 3px, transparent 3px),
+      radial-gradient(
+        37.49% 48.04% at 50% 50%,
+        #ccd5df 0%,
+        rgba(75, 85, 101, 0) 100%
+      );
+    background-size:
+      20px 20px,
+      20px 20px,
+      100% 100%,
+      100% 100%;
+    background-position:
+      0 0,
+      10px 10px,
+      center center,
+      center center;
+    mask-image: radial-gradient(black 50%, transparent 60%);
+    -webkit-mask-image: radial-gradient(black 50%, transparent 60%);
+    opacity: 0.3;
+    z-index: -10;
+    transform: matrix(-0.21, 0.98, 0.98, 0.21, 0, 0);
+    display: none;
+    pointer-events: none;
+  }
+
+  .featured-background::after {
+    content: '';
+    position: absolute;
+    width: 869px;
+    height: 1221px;
+    top: 5%;
+    left: 90%;
+    background-image: radial-gradient(
+        circle 3px at center,
+        #ccd5df 3px,
+        transparent 3px
+      ),
+      radial-gradient(circle 3px at center, #ccd5df 3px, transparent 3px),
+      radial-gradient(
+        37.49% 48.04% at 50% 50%,
+        #ccd5df 0%,
+        rgba(75, 85, 101, 0) 100%
+      );
+    background-size:
+      20px 20px,
+      20px 20px,
+      100% 100%,
+      100% 100%;
+    background-position:
+      0 0,
+      10px 10px,
+      center center,
+      center center;
+    mask-image: radial-gradient(black 50%, transparent 60%);
+    -webkit-mask-image: radial-gradient(black 50%, transparent 60%);
+    opacity: 0.3;
+    z-index: -10;
+    transform: rotate(71.48deg);
+    pointer-events: none;
+  }
+
+  @media (min-width: 900px) {
+    .featured-background::before {
+      display: block;
+      left: calc(-64px - (100vw - 1440px) / 2);
+    }
+
+    .featured-background::after {
+      right: calc(-64px - (100vw - 1440px) / 2);
+    }
+  }
+
+  @media (min-width: 481px) and (max-width: 899px) {
+    .featured-background::after {
+      right: calc(-32px - (100vw - 100%) / 2);
+    }
+  }
+}

@@ -1,8 +1,8 @@
 import Image from 'next/image'
 import cn from '@/lib/utils/cn'
-import { getPlatformDisplay } from '@/constants/platforms'
 import { textStyles } from './styles'
 import { ProjectBase } from '@/types/project'
+import Tag from '@/components/Tag'
 
 export type PortfolioSection = 'featured' | 'gallery'
 
@@ -28,11 +28,11 @@ export default function PortfolioCard({
         'h-full rounded-[48px] bg-white p-2.5 sm:p-5',
         'shadow-[0px_4px_28px_0px_rgba(17,25,38,0.04),0px_4px_4px_0px_rgba(0,0,0,0.03)]',
         'border border-slate-200',
-        'transition-all duration-300 ease-in hover:-translate-y-1 hover:shadow-[0px_4px_4px_0px_rgba(0,0,0,0.01),0px_4px_28px_0px_rgba(17,25,38,0.14)] sm:hover:-translate-y-4',
+        'transform-gpu transition-all duration-200 ease-out hover:-translate-y-0.5 hover:shadow-[0px_4px_4px_0px_rgba(0,0,0,0.01),0px_4px_28px_0px_rgba(17,25,38,0.14)] sm:hover:-translate-y-2',
         className
       )}
       role="article"
-      aria-labelledby="project-title-title"
+      aria-labelledby="project-title"
     >
       <div className="flex flex-col justify-between overflow-hidden rounded-[32px] border border-slate-100 bg-gradient-to-tr from-[#f8f8f8] to-slate-50 md:flex-row md:gap-10">
         {/* Left Column */}
@@ -48,6 +48,7 @@ export default function PortfolioCard({
               {company}
             </h3>
             <h2
+              id="project-title"
               className={cn(
                 'whitespace-pre-line font-hauora text-[24px] font-semibold text-slate-700',
                 typography.title
@@ -70,20 +71,7 @@ export default function PortfolioCard({
             aria-label="Platforms"
           >
             {tags.map((tag) => (
-              <div
-                key={tag}
-                role="listitem"
-                className="flex items-center rounded-button border-2 border-blue-primary px-3 py-0.5"
-              >
-                <span
-                  className={cn(
-                    'font-geist text-[11px] text-blue-primary',
-                    typography.tags
-                  )}
-                >
-                  {getPlatformDisplay(tag)}
-                </span>
-              </div>
+              <Tag key={tag} platform={tag} size={typography.tagSize} />
             ))}
           </div>
         </div>
