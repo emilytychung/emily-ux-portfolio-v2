@@ -22,7 +22,7 @@ export default function SeeOtherProjects({
   )
 
   return (
-    <Container>
+    <Container className="pb-16 pt-8 sm:pb-24 sm:pt-16">
       <SectionHeader sectionHeaderMap={DETAIL_SECTION_HEADERS.seeOther} />
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
         {otherProjects.map((project) => (
