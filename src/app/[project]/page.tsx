@@ -8,6 +8,7 @@ import CoverPhoto from '@/components/ProjectDetail/CoverPhoto'
 import Summary from '@/components/ProjectDetail/Summary'
 import Footer from '@/components/Footer'
 import FlatlayPhoto from '@/components/ProjectDetail/FlatlayPhoto'
+import SeeOtherProjects from '@/components/ProjectDetail/SeeOtherProjects'
 
 interface ProjectPageProps {
   params: Promise<{ project: string }>
@@ -67,6 +68,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         <CoverPhoto coverImage={coverImage} alt={description} />
         <Summary summary={summary} />
         <FlatlayPhoto title={title} flatlayImages={flatlayImages} />
+        <SeeOtherProjects currentProjectTitle={title} />
       </main>
       <Footer />
     </ProtectedRoute>

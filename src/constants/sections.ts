@@ -1,4 +1,4 @@
-import { SectionKey } from '@/types/sections'
+import { HomeSectionKey, DetailSectionKey } from '@/types/sections'
 
 export interface SectionHeaderMap {
   labelText?: string
@@ -6,7 +6,7 @@ export interface SectionHeaderMap {
   id?: string
 }
 
-export const HOME_SECTION_HEADERS: Record<SectionKey, SectionHeaderMap> = {
+export const HOME_SECTION_HEADERS: Record<HomeSectionKey, SectionHeaderMap> = {
   featured: {
     labelText: 'Featured case studies',
     headingText: 'From concept to design',
@@ -24,5 +24,15 @@ export const HOME_SECTION_HEADERS: Record<SectionKey, SectionHeaderMap> = {
     labelText: 'Outside of work',
     headingText: 'Polaroids from my personal life',
     id: 'about',
+  },
+} as const
+
+export const DETAIL_SECTION_HEADERS: Record<
+  DetailSectionKey,
+  SectionHeaderMap
+> = {
+  seeOther: {
+    headingText: 'See other projects',
+    id: 'seeOther',
   },
 } as const
