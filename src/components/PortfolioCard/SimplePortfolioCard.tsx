@@ -2,9 +2,12 @@ import Image from 'next/image'
 import cn from '@/lib/utils/cn'
 import { textStyles } from './styles'
 import { SimpleProjectBase } from '@/types/project'
+import { PlatformKey } from '@/types/platforms'
+import Tag from '@/components/Tag'
 
 interface SimplePortfolioCardProps extends SimpleProjectBase {
   className?: string
+  tags?: PlatformKey[]
 }
 
 export default function SimplePortfolioCard({
@@ -12,6 +15,7 @@ export default function SimplePortfolioCard({
   title,
   coverImage,
   className,
+  tags,
 }: SimplePortfolioCardProps) {
   const typography = textStyles.gallery
 
@@ -21,7 +25,7 @@ export default function SimplePortfolioCard({
         'h-full rounded-[48px] bg-white p-2.5 sm:p-5',
         'shadow-[0px_4px_28px_0px_rgba(17,25,38,0.04),0px_4px_4px_0px_rgba(0,0,0,0.03)]',
         'border border-slate-200',
-        'transition-all duration-300 ease-in hover:-translate-y-1 hover:shadow-[0px_4px_4px_0px_rgba(0,0,0,0.01),0px_4px_28px_0px_rgba(17,25,38,0.14)] sm:hover:-translate-y-4',
+        'transform-gpu transition-all duration-200 ease-out hover:-translate-y-0.5 hover:shadow-[0px_4px_4px_0px_rgba(0,0,0,0.01),0px_4px_28px_0px_rgba(17,25,38,0.14)] sm:hover:-translate-y-2',
         className
       )}
       role="article"
@@ -44,9 +48,17 @@ export default function SimplePortfolioCard({
                 'overflow-hidden overflow-ellipsis whitespace-nowrap font-hauora text-[24px] font-semibold text-slate-700',
                 typography.title
               )}
+              id="project-title-title"
             >
               {title}
             </h2>
+            {!!tags && (
+              <div role="list" aria-label="Platforms">
+                {tags.map((tag) => (
+                  <Tag key={tag} platform={tag} size={typography.tagSize} />
+                ))}
+              </div>
+            )}
           </div>
         </div>
 
