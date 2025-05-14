@@ -18,6 +18,13 @@ export default function Summary({ summary = [] }: SummaryProps) {
             index % 2 === 1 ? 'md:flex-row-reverse' : ''
           }`}
         >
+          {item.imgFile && (
+            <Image
+              src={item.imgFile}
+              alt={item.subheader || ''}
+              priority={index === 0}
+            />
+          )}{' '}
           <div className="md:max-w-[501px] md:flex-1">
             <h3 className="text-heading-sm mb-2 text-slate-900">
               {item.subheader}
@@ -26,13 +33,6 @@ export default function Summary({ summary = [] }: SummaryProps) {
               {item.description}
             </p>
           </div>
-          {item.imgFile && (
-            <Image
-              src={item.imgFile}
-              alt={item.subheader || ''}
-              priority={index === 0}
-            />
-          )}
         </div>
       ))}
     </Container>
