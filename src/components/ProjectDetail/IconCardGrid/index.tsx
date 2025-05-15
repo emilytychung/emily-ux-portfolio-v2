@@ -34,7 +34,7 @@ export default function IconCardGrid({
     >
       <h3
         id={`${sectionTitle.toLowerCase()}-heading`}
-        className="text-design-process-header"
+        className="text-design-process-header text-center"
       >
         {sectionTitle}
       </h3>
@@ -42,7 +42,9 @@ export default function IconCardGrid({
       <div className="grid gap-16 sm:gap-[96px]">
         {sections.map(({ title, cards }) => (
           <div key={title}>
-            <h4 className="text-title-header mb-8 md:mb-16">{title}</h4>
+            <h4 className="text-title-header mb-8 text-center md:mb-16">
+              {title}
+            </h4>
 
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-1 md:grid-cols-3">
               {cards.map(({ subheader, description, IconComponent }) => (

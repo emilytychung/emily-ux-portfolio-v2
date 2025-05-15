@@ -109,7 +109,7 @@ export interface ProjectData extends ProjectBase {
     discover: HighlightSection[]
     define: CardGridSection[]
     userPersona: UserSection
-    explore: ProcessSection
+    explore: HighlightSection
     execute: Array<HighlightSection | DescriptionSection>
   }
   outcomes: CardGridSection[]

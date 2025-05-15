@@ -196,7 +196,6 @@ const TD_GLOBAL_TRANSFERS: ProjectData = {
         },
       ],
     },
-
     explore: {
       title: 'Med-fi & User Testing',
       videoFile: cafeHopping,
@@ -212,7 +211,7 @@ const TD_GLOBAL_TRANSFERS: ProjectData = {
             'Users found "destination" confusing, especially when sending money to Canadian banks while abroad. Clearer instructions were needed to avoid misunderstandings.',
         },
         {
-          subheader: 'Clarifying Destination and Recipient Banks',
+          subheader: 'Vendor Logos & Sending Methods',
           description:
             'Vendor logos were prioritized for business objectives, but users struggled to recognize transfer options and differentiate between vendors.',
         },

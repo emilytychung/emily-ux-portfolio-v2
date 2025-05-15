@@ -36,14 +36,14 @@
 
   /* Project Detail Page: Blue design process step styles */
   .text-design-process-header {
-    @apply text-center font-geist uppercase text-blue-primary;
+    @apply font-geist uppercase text-blue-primary;
     @apply text-sm font-medium leading-[16px] tracking-wide;
     @apply sm:text-base sm:leading-[23px];
   }
 
   /* Project Detail Page: TitleHeader styles */
   .text-title-header {
-    @apply text-center font-hauora text-slate-900;
+    @apply font-hauora text-slate-900;
     @apply text-xl font-semibold leading-[150%] tracking-tight;
     @apply sm:text-3xl md:text-3xl lg:text-3xl;
   }
