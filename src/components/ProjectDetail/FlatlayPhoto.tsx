@@ -42,13 +42,13 @@ export default function FlatlayPhoto({
         : flatlayImages.desktop
 
   return (
-    <div className="relative h-[920px]">
+    <section className="relative mt-8 h-[920px] sm:mt-4 md:mt-0">
       <Image
         src={imageToShow}
         alt={`${title} project flatlay design`}
         fill
         className="object-cover"
       />
-    </div>
+    </section>
   )
 }

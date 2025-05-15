@@ -27,10 +27,12 @@ export const hanziPen = localFont({
 
 export const mono = Geist_Mono({
   subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
   variable: '--font-geist-mono',
 })
 
 export const inter = Inter({
   subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
   variable: '--font-inter',
 })
