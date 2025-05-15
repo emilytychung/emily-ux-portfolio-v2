@@ -3,18 +3,14 @@ import Image from 'next/image'
 import { StaticImageData } from 'next/image'
 import cn from '@/lib/utils/cn'
 import Container from '@/components/Container'
-import { HighlightItem } from '@/types/project'
+import { HighlightItem, MediaItem } from '@/types/project'
 
 interface ProjectHighlightColumnProps {
   sectionTitle: string
   title: string
   highlights?: HighlightItem[]
   description?: string
-  media?: {
-    type: 'image' | 'video'
-    src: StaticImageData
-    alt?: string
-  }
+  media?: MediaItem
   className?: string
 }
 
@@ -108,7 +104,7 @@ export default function ProjectHighlightColumn({
               <div className="relative h-full w-full">
                 <Image
                   src={media.src}
-                  alt={media.alt || `Image illustrating ${title}`}
+                  alt={`Image illustrating ${title}`}
                   fill
                   style={{ objectFit: 'cover' }}
                   className={cn(

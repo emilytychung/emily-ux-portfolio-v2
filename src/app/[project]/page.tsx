@@ -75,11 +75,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
           sectionTitle="EXPORE"
           title={designProcess.explore.title}
           highlights={designProcess.explore.highlights}
-          media={{
-            type: 'image',
-            src: designProcess.explore.videoFile,
-            alt: designProcess.explore.title,
-          }}
+          media={designProcess.explore.media}
         />
         <IconCardGrid sectionTitle="DEFINE" sections={designProcess.define} />
         <IconCardGrid sectionTitle="OUTCOMES" sections={outcomes} />

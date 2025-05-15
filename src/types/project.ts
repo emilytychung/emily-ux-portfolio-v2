@@ -38,9 +38,15 @@ export interface HighlightItem {
   imgFile?: StaticImageData
 }
 
+export interface MediaItem {
+  type: 'image' | 'video'
+  src: StaticImageData
+}
+
 export interface HighlightSection {
   title: string
   highlights: HighlightItem[]
+  media?: MediaItem
   imgFile?: StaticImageData
   videoFile?: StaticImageData
 }

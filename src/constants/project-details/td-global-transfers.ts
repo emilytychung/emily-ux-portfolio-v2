@@ -198,7 +198,10 @@ const TD_GLOBAL_TRANSFERS: ProjectData = {
     },
     explore: {
       title: 'Med-fi & User Testing',
-      videoFile: cafeHopping,
+      media: {
+        type: 'image',
+        src: cafeHopping,
+      },
       highlights: [
         {
           subheader: 'Exchange Rate Dropdown',
