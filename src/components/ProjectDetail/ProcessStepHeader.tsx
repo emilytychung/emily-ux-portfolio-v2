@@ -11,6 +11,7 @@ type ProcessStepHeaderProps = {
 export default function ProcessStepHeader({
   children,
   className,
+  id,
   as: Component = 'h3',
 }: ProcessStepHeaderProps) {
   return (
@@ -21,6 +22,7 @@ export default function ProcessStepHeader({
         'sm:text-base sm:leading-[23px]',
         className
       )}
+      id={id}
     >
       {children}
     </Component>
