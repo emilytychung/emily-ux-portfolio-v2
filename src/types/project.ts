@@ -2,12 +2,12 @@ import { StaticImageData } from 'next/image'
 import { FC, SVGProps } from 'react'
 import { PlatformKey } from './platforms'
 
-export type IconComponent = FC<SVGProps<SVGSVGElement>>
+export type IconComponentType = FC<SVGProps<SVGSVGElement>>
 
 export interface SummaryItem {
   subheader: string
   description: string
-  iconComponent?: IconComponent
+  IconComponentType?: IconComponentType
   imgFile?: StaticImageData
 }
 
@@ -25,7 +25,7 @@ export interface HighlightItem {
   subheader: string
   description: string
   imgFile?: StaticImageData
-  iconComponent?: IconComponent
+  IconComponent?: IconComponentType
 }
 
 export interface HighlightSection {
@@ -100,6 +100,6 @@ export interface ProjectData extends ProjectBase {
     define: Array<HighlightSection | UserSection>
     explore: ProcessSection
     execute: Array<HighlightSection | DescriptionSection>
-    outcomes?: HighlightSection[]
   }
+  outcomes: HighlightSection[]
 }

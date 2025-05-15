@@ -259,54 +259,54 @@ const TD_GLOBAL_TRANSFERS: ProjectData = {
         ],
       },
     ],
-    outcomes: [
-      {
-        title: 'Metrics',
-        highlights: [
-          {
-            subheader: 'Usability improvements',
-            description: '',
-            iconComponent: CompassIcon,
-          },
-          {
-            subheader: 'Increased User Engagement',
-            description:
-              'The platform successfully drove engagement, with over 200,000 TD customers sending 1.8 million transfers globally.',
-            iconComponent: CompassIcon,
-          },
-          {
-            subheader: 'Business Recognition',
-            description:
-              'The project was awarded the 2022 BIG Innovation Award by the Business Intelligence Group, recognizing it as an innovative digital solution.',
-            iconComponent: CompassIcon,
-          },
-        ],
-      },
-      {
-        title: 'Reflection & Learnings',
-        highlights: [
-          {
-            subheader: 'Strategic Thinking',
-            description:
-              'Balanced business goals (promoting partnerships) with user needs for simplicity and trust. Competitive research into travel comparison platforms shaped the marketplace structure.',
-            iconComponent: CompassIcon,
-          },
-          {
-            subheader: 'Cross-Functional Leadership',
-            description:
-              'Collaborated with developers, accessibility experts, legal, and copywriters to meet business, technical, and compliance needs while improving usability.',
-            iconComponent: CompassIcon,
-          },
-          {
-            subheader: 'Measurable Impact',
-            description:
-              'This project set the stage for over five additional TD collaborations, including redesigns of the Interac e-Transfer system and TD’s investing and onboarding processes.',
-            iconComponent: CompassIcon,
-          },
-        ],
-      },
-    ],
   },
+  outcomes: [
+    {
+      title: 'Metrics',
+      highlights: [
+        {
+          subheader: 'Usability improvements',
+          description: '',
+          IconComponent: CompassIcon,
+        },
+        {
+          subheader: 'Increased User Engagement',
+          description:
+            'The platform successfully drove engagement, with over 200,000 TD customers sending 1.8 million transfers globally.',
+          IconComponent: CompassIcon,
+        },
+        {
+          subheader: 'Business Recognition',
+          description:
+            'The project was awarded the 2022 BIG Innovation Award by the Business Intelligence Group, recognizing it as an innovative digital solution.',
+          IconComponent: CompassIcon,
+        },
+      ],
+    },
+    {
+      title: 'Reflection & Learnings',
+      highlights: [
+        {
+          subheader: 'Strategic Thinking',
+          description:
+            'Balanced business goals (promoting partnerships) with user needs for simplicity and trust. Competitive research into travel comparison platforms shaped the marketplace structure.',
+          IconComponent: CompassIcon,
+        },
+        {
+          subheader: 'Cross-Functional Leadership',
+          description:
+            'Collaborated with developers, accessibility experts, legal, and copywriters to meet business, technical, and compliance needs while improving usability.',
+          IconComponent: CompassIcon,
+        },
+        {
+          subheader: 'Measurable Impact',
+          description:
+            'This project set the stage for over five additional TD collaborations, including redesigns of the Interac e-Transfer system and TD’s investing and onboarding processes.',
+          IconComponent: CompassIcon,
+        },
+      ],
+    },
+  ],
 }
 
 export default TD_GLOBAL_TRANSFERS

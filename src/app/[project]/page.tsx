@@ -8,6 +8,7 @@ import CoverPhoto from '@/components/ProjectDetail/CoverPhoto'
 import Summary from '@/components/ProjectDetail/Summary'
 import Footer from '@/components/Footer'
 import FlatlayPhoto from '@/components/ProjectDetail/FlatlayPhoto'
+import Outcomes from '@/components/ProjectDetail/Outcomes'
 import SeeOtherProjects from '@/components/ProjectDetail/SeeOtherProjects'
 
 interface ProjectPageProps {
@@ -49,6 +50,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
     companyLogoIcon,
     coverImage,
     summary,
+    outcomes,
     flatlayImages,
   } = projectData
 
@@ -67,6 +69,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         />
         <CoverPhoto coverImage={coverImage} alt={description} />
         <Summary summary={summary} />
+        <Outcomes outcomes={outcomes} />
         <FlatlayPhoto title={title} flatlayImages={flatlayImages} />
         <SeeOtherProjects currentProjectTitle={title} />
       </main>
