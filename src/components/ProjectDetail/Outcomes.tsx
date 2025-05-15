@@ -53,6 +53,52 @@ export function IconWrapper({
   )
 }
 
+function FormattedDescription({ description }: { description: string }) {
+  // If no description or no bullet character is present, render as simple paragraph
+  if (!description || !description.includes('\u2B24')) {
+    return (
+      <p className="font-inter text-base font-normal leading-[160%] tracking-tight text-[#697586] sm:text-lg md:text-lg">
+        {description}
+      </p>
+    )
+  }
+
+  // Split by bullet character and process
+  const parts = description.split('\u2B24').filter(Boolean)
+
+  if (parts.length <= 1) {
+    // If there's only one part after splitting, it might be a malformed string
+    return (
+      <p className="font-inter text-base font-normal leading-[160%] tracking-tight text-[#697586] sm:text-lg md:text-lg">
+        {description}
+      </p>
+    )
+  }
+
+  return (
+    <div className="space-y-2">
+      {/* First part is typically an intro paragraph */}
+      {parts[0].trim() && (
+        <p className="font-inter text-base font-normal leading-[160%] tracking-tight text-[#697586] sm:text-lg md:text-lg">
+          {parts[0].trim()}
+        </p>
+      )}
+
+      {/* Remaining parts are list items */}
+      <ul className="ml-5 list-disc space-y-1">
+        {parts.slice(1).map((item, index) => (
+          <li
+            key={index}
+            className="font-inter text-base font-normal leading-[160%] tracking-tight text-[#697586] sm:text-lg md:text-lg"
+          >
+            {item.trim()}
+          </li>
+        ))}
+      </ul>
+    </div>
+  )
+}
+
 export default function Outcomes({ outcomes }: OutcomesProps) {
   return (
     <section aria-labelledby="outcomes-heading" className="py-12 sm:py-16">
@@ -78,19 +124,17 @@ export default function Outcomes({ outcomes }: OutcomesProps) {
                       'bg-[#FCFCFD] p-12'
                     )}
                   >
-                    <div className="flex flex-col gap-6 sm:flex-row md:flex-col">
+                    <div className="flex flex-col gap-8 sm:flex-row md:flex-col">
                       {IconComponent && (
                         <IconWrapper>
                           <IconComponent className="h-5 w-5 text-[#0A84FF] sm:h-8 sm:w-8" />
                         </IconWrapper>
                       )}
                       <div className="flex flex-col gap-2">
-                        <h3 className="font-hauora text-lg font-bold leading-[160%] tracking-tight text-[#111926] sm:text-xl md:text-xl">
+                        <h3 className="font-hauora text-lg font-bold !leading-[160%] tracking-tight text-[#111926] sm:text-lg md:text-lg">
                           {subheader}
                         </h3>
-                        <p className="font-inter text-base font-normal leading-[160%] tracking-tight text-[#697586] sm:text-lg md:text-lg">
-                          {description}
-                        </p>
+                        <FormattedDescription description={description} />
                       </div>
                     </div>
                   </div>

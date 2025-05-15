@@ -191,6 +191,35 @@ const TD_GLOBAL_TRANSFERS: ProjectData = {
         ],
       },
     ],
+    userPersona: {
+      title: 'User personas',
+      users: [
+        {
+          name: 'Amelia',
+          title: 'The busy professional',
+          description: `32, Toronto, Marketing Manager. Highly familiar with digital tools but prefers quick, straightforward experiences. Sends monthly remittances to her family abroad.\n \u2B24 Goals: Understand fees and delivery timelines upfront. \u2B24 Pain Points: Worries about hidden fees and unclear exchange rates. \u2B24 Behavioral Insights: Prefers mobile apps for quick actions but switches to desktop for more complex tasks.`,
+          goals: 'Understand fees and delivery timelines upfront.',
+          painPoints: 'Worries about hidden fees and unclear exchange rates.',
+          behavioralInsights:
+            'Prefers mobile apps for quick actions but switches to desktop for more complex tasks.',
+          imgFile: tdGlobalUser1,
+        },
+        {
+          name: 'David',
+          title: 'The New User',
+          description:
+            '48. Lives in Ott`awa as a Small Business Owner. Minimal experience with online banking; primarily deals with local transfers. Recently began sending money to an international supplier.',
+          goals:
+            'Complete transfers confidently without worrying about security issues.',
+          painPoints:
+            'Finds too much information overwhelming and doesn’t know where to focus.',
+          behavioralInsights:
+            'Relies on visual cues like icons and progress bars and direct support channels for confidence.',
+          imgFile: tdGlobalUser2,
+        },
+      ],
+    },
+
     explore: {
       title: 'Med-fi & User Testing',
       videoFile: cafeHopping,
@@ -266,7 +295,8 @@ const TD_GLOBAL_TRANSFERS: ProjectData = {
       highlights: [
         {
           subheader: 'Usability improvements',
-          description: '',
+          description:
+            'Improvements in the System Usability Scale (SUS) scores:\n \u2B24 Desktop: 83.6 (above industry average of 68).\n \u2B24 Mobile: 80',
           IconComponent: CompassIcon,
         },
         {

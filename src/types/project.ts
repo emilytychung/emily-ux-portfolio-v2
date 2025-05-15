@@ -97,7 +97,8 @@ export interface ProjectData extends ProjectBase {
   summary: SummaryItem[]
   designProcess: {
     discover: HighlightSection[]
-    define: Array<HighlightSection | UserSection>
+    define: HighlightSection[]
+    userPersona: UserSection
     explore: ProcessSection
     execute: Array<HighlightSection | DescriptionSection>
   }
