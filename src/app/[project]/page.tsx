@@ -6,10 +6,11 @@ import PROJECT_PARAM_DATA_MAP from '@/constants/project-details'
 import Jumbotron from '@/components/ProjectDetail/Jumbotron'
 import CoverPhoto from '@/components/ProjectDetail/CoverPhoto'
 import Summary from '@/components/ProjectDetail/Summary'
-import Footer from '@/components/Footer'
+import ProjectHighlightColumn from '@/components/ProjectDetail/ProjectHighlightColumn'
 import FlatlayPhoto from '@/components/ProjectDetail/FlatlayPhoto'
 import IconCardGrid from '@/components/ProjectDetail/IconCardGrid'
 import SeeOtherProjects from '@/components/ProjectDetail/SeeOtherProjects'
+import Footer from '@/components/Footer'
 
 interface ProjectPageProps {
   params: Promise<{ project: string }>
@@ -70,6 +71,12 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         />
         <CoverPhoto coverImage={coverImage} alt={description} />
         <Summary summary={summary} />
+        <ProjectHighlightColumn
+          sectionTitle="EXPORE"
+          title={designProcess.explore.title}
+          highlights={designProcess.explore.highlights}
+          media={designProcess.explore.media}
+        />
         <IconCardGrid sectionTitle="DEFINE" sections={designProcess.define} />
         <IconCardGrid sectionTitle="OUTCOMES" sections={outcomes} />
         <FlatlayPhoto title={title} flatlayImages={flatlayImages} />
