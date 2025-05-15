@@ -131,3 +131,117 @@ export function SparkleIcon({ className }: IconProps) {
     </svg>
   )
 }
+
+export function IncreasingIcon({ className }: IconProps) {
+  return (
+    <svg
+      className={className}
+      width="27"
+      height="23"
+      viewBox="0 0 27 23"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+      role="img"
+    >
+      <path
+        d="M1.33398 1.70361V21.0369H26.0007M6.66732 15.7036L12.334 10.0369L15.0007 12.7036L23.334 4.37028M23.334 4.37028H17.334M23.334 4.37028V10.3703"
+        stroke="#0A84FF"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  )
+}
+
+export function RocketIcon({ className }: IconProps) {
+  return (
+    <svg
+      className={className}
+      width="27"
+      height="27"
+      viewBox="0 0 27 27"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+      role="img"
+    >
+      <path
+        d="M6.48148 15.0366H1.66667L5.66667 7.70329H12.3056M6.48148 15.0366L11.6667 20.2218M6.48148 15.0366L12.3056 7.70329M11.6667 20.2218V25.0366L19 21.0366V14.3977M11.6667 20.2218L19 14.3977M19 14.3977C23.1111 10.6292 25.6667 6.5181 25.6667 1.03662C20.1852 1.03662 16.0741 3.59218 12.3056 7.70329M3.74074 25.7033H1V22.9625C1 21.4489 2.22707 20.2218 3.74074 20.2218C5.25441 20.2218 6.48148 21.4489 6.48148 22.9625C6.48148 24.4762 5.25441 25.7033 3.74074 25.7033Z"
+        stroke="#0A84FF"
+        strokeWidth="2"
+        strokeLinejoin="round"
+      />
+    </svg>
+  )
+}
+
+export function CrossFunctionalIcon({ className }: IconProps) {
+  return (
+    <svg
+      className={className}
+      width="25"
+      height="27"
+      viewBox="0 0 25 27"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+      role="img"
+    >
+      <path
+        d="M7.00033 25.0369L1.66699 19.7036L7.00033 14.3703M18.3337 12.3703L23.667 7.03695L18.3337 1.70361M3.33366 19.7036H23.667M1.66699 7.03695H22.3337"
+        stroke="#0A84FF"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  )
+}
+
+export function ThinkingIcon({ className }: IconProps) {
+  return (
+    <svg
+      className={className}
+      width="28"
+      height="27"
+      viewBox="0 0 28 27"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+      role="img"
+    >
+      <path
+        d="M14.0003 24.6649C14.9802 25.3208 16.1586 25.7033 17.4263 25.7033C20.2428 25.7033 22.6183 23.815 23.356 21.2354C25.1031 20.5189 26.3337 18.8011 26.3337 16.7959C26.3337 15.4538 25.7825 14.2405 24.8941 13.37C25.7825 12.4994 26.3337 11.2861 26.3337 9.94403C26.3337 7.47066 24.4615 5.43456 22.0569 5.17555C21.4582 2.79725 19.3052 1.03662 16.7411 1.03662C15.7426 1.03662 14.8066 1.30355 14.0003 1.76995M14.0003 24.6649C13.0204 25.3208 11.8421 25.7033 10.5744 25.7033C7.75785 25.7033 5.38233 23.815 4.64468 21.2354C2.89754 20.5189 1.66699 18.8011 1.66699 16.7959C1.66699 15.4538 2.2182 14.2405 3.10658 13.37C2.2182 12.4994 1.66699 11.2861 1.66699 9.94403C1.66699 7.47066 3.53917 5.43457 5.94371 5.17555C6.54249 2.79725 8.69543 1.03662 11.2596 1.03662C12.258 1.03662 13.1941 1.30355 14.0003 1.76995M14.0003 24.6649L14.0003 1.76995M9.66699 15.7033C12.0602 15.7033 14.0003 17.6434 14.0003 20.0366M18.3337 11.0366C15.9404 11.0366 14.0003 9.09652 14.0003 6.70329"
+        stroke="#0A84FF"
+        strokeWidth="2"
+        strokeLinecap="round"
+      />
+    </svg>
+  )
+}
+
+export function RecognitionIcon({ className }: IconProps) {
+  return (
+    <svg
+      className={className}
+      width="22"
+      height="31"
+      viewBox="0 0 22 31"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+      role="img"
+    >
+      <path
+        d="M5.66602 19.3703V29.0369L11.3327 26.3703L16.9993 29.0369V19.3703M20.9993 11.3703C20.9993 16.709 16.6714 21.0369 11.3327 21.0369C5.99393 21.0369 1.66602 16.709 1.66602 11.3703C1.66602 6.03153 5.99393 1.70361 11.3327 1.70361C16.6714 1.70361 20.9993 6.03153 20.9993 11.3703Z"
+        stroke="#0A84FF"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  )
+}
+;('')

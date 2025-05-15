@@ -5,6 +5,11 @@ import {
   LockIcon,
   BalanceIcon,
   SparkleIcon,
+  IncreasingIcon,
+  RecognitionIcon,
+  ThinkingIcon,
+  CrossFunctionalIcon,
+  RocketIcon,
 } from '@/components/Icons'
 import cafeHopping from '@images/polaroids/cafe.png'
 import tdLogo from '@images/logo/td.png'
@@ -269,19 +274,19 @@ const TD_GLOBAL_TRANSFERS: ProjectData = {
           subheader: 'Usability improvements',
           description:
             'Improvements in the System Usability Scale (SUS) scores:\n \u2B24 Desktop: 83.6 (above industry average of 68).\n \u2B24 Mobile: 80',
-          IconComponent: CompassIcon,
+          IconComponent: LockIcon,
         },
         {
           subheader: 'Increased User Engagement',
           description:
             'The platform successfully drove engagement, with over 200,000 TD customers sending 1.8 million transfers globally.',
-          IconComponent: CompassIcon,
+          IconComponent: IncreasingIcon,
         },
         {
           subheader: 'Business Recognition',
           description:
             'The project was awarded the 2022 BIG Innovation Award by the Business Intelligence Group, recognizing it as an innovative digital solution.',
-          IconComponent: CompassIcon,
+          IconComponent: RecognitionIcon,
         },
       ],
     },
@@ -292,19 +297,19 @@ const TD_GLOBAL_TRANSFERS: ProjectData = {
           subheader: 'Strategic Thinking',
           description:
             'Balanced business goals (promoting partnerships) with user needs for simplicity and trust. Competitive research into travel comparison platforms shaped the marketplace structure.',
-          IconComponent: CompassIcon,
+          IconComponent: ThinkingIcon,
         },
         {
           subheader: 'Cross-Functional Leadership',
           description:
             'Collaborated with developers, accessibility experts, legal, and copywriters to meet business, technical, and compliance needs while improving usability.',
-          IconComponent: CompassIcon,
+          IconComponent: CrossFunctionalIcon,
         },
         {
           subheader: 'Measurable Impact',
           description:
             'This project set the stage for over five additional TD collaborations, including redesigns of the Interac e-Transfer system and TD’s investing and onboarding processes.',
-          IconComponent: CompassIcon,
+          IconComponent: RocketIcon,
         },
       ],
     },
