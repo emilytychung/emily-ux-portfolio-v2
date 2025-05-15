@@ -21,11 +21,21 @@ export interface UserPersona {
   imgFile: StaticImageData
 }
 
+export interface CardItem {
+  subheader: string
+  description: string
+  IconComponent: IconComponentType
+}
+
+export interface CardGridSection {
+  title: string
+  cards: CardItem[]
+}
+
 export interface HighlightItem {
   subheader: string
   description: string
   imgFile?: StaticImageData
-  IconComponent?: IconComponentType
 }
 
 export interface HighlightSection {
@@ -97,10 +107,10 @@ export interface ProjectData extends ProjectBase {
   summary: SummaryItem[]
   designProcess: {
     discover: HighlightSection[]
-    define: HighlightSection[]
+    define: CardGridSection[]
     userPersona: UserSection
     explore: ProcessSection
     execute: Array<HighlightSection | DescriptionSection>
   }
-  outcomes: HighlightSection[]
+  outcomes: CardGridSection[]
 }

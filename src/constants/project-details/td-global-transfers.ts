@@ -123,7 +123,7 @@ const TD_GLOBAL_TRANSFERS: ProjectData = {
     define: [
       {
         title: 'Problem & Goal',
-        highlights: [
+        cards: [
           {
             subheader: 'Complex Navigation',
             description:
@@ -146,7 +146,7 @@ const TD_GLOBAL_TRANSFERS: ProjectData = {
       },
       {
         title: 'Challenge & Constraints',
-        highlights: [
+        cards: [
           {
             subheader: 'Inherited Design Constraints',
             description:
@@ -269,7 +269,7 @@ const TD_GLOBAL_TRANSFERS: ProjectData = {
   outcomes: [
     {
       title: 'Metrics',
-      highlights: [
+      cards: [
         {
           subheader: 'Usability improvements',
           description:
@@ -292,7 +292,7 @@ const TD_GLOBAL_TRANSFERS: ProjectData = {
     },
     {
       title: 'Reflection & Learnings',
-      highlights: [
+      cards: [
         {
           subheader: 'Strategic Thinking',
           description:

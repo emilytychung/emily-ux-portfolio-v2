@@ -1,6 +1,6 @@
 import React from 'react'
 import cn from '@/lib/utils/cn'
-import { HighlightItem } from '@/types/project'
+import { CardItem } from '@/types/project'
 import Container from '@/components/Container'
 import ProcessStepHeader from '@/components/ProjectDetail/ProcessStepHeader'
 import TitleHeader from '@/components/ProjectDetail/TitleHeader'
@@ -9,7 +9,7 @@ import FormattedDescription from './FormattedDescription'
 
 interface GridSection {
   title: string
-  highlights: HighlightItem[]
+  cards: CardItem[]
 }
 
 interface IconCardGridProps {
@@ -39,12 +39,12 @@ export default function IconCardGrid({
       </ProcessStepHeader>
 
       <div className="grid gap-16 sm:gap-[96px]">
-        {sections.map(({ title, highlights }) => (
+        {sections.map(({ title, cards }) => (
           <div key={title}>
             <TitleHeader className="mb-8 md:mb-16">{title}</TitleHeader>
 
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-1 md:grid-cols-3">
-              {highlights.map(({ subheader, description, IconComponent }) => (
+              {cards.map(({ subheader, description, IconComponent }) => (
                 <div
                   key={subheader}
                   className={cn('flex flex-col p-12', cardStyles)}
