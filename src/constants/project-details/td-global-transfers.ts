@@ -123,19 +123,19 @@ const TD_GLOBAL_TRANSFERS: ProjectData = {
             subheader: 'Complex Navigation',
             description:
               'Users faced confusing flows, with key information split across multiple steps, leading to frustration.',
-            iconComponent: CompassIcon,
+            IconComponent: CompassIcon,
           },
           {
             subheader: 'Trust Barriers',
             description:
               'Unfamiliarity with third-party services created uncertainty, as users expected an experience similar to Interac e-Transfer.',
-            iconComponent: ShieldIcon,
+            IconComponent: ShieldIcon,
           },
           {
             subheader: 'Information Overload',
             description:
               'Too many data points—fees, exchange rates, and logos—were presented simultaneously, overwhelming users.',
-            iconComponent: NotebookIcon,
+            IconComponent: NotebookIcon,
           },
         ],
       },
@@ -146,47 +146,19 @@ const TD_GLOBAL_TRANSFERS: ProjectData = {
             subheader: 'Inherited Design Constraints',
             description:
               'Working within pre-existing designs and partially built features required close collaboration with developers and business teams',
-            iconComponent: LockIcon,
+            IconComponent: LockIcon,
           },
           {
             subheader: 'Balancing Business Goals',
             description:
               'Aligning user needs for simplicity with business priorities to promote partnerships like Western Union and Visa Direct.',
-            iconComponent: BalanceIcon,
+            IconComponent: BalanceIcon,
           },
           {
             subheader: 'Platform Consistency',
             description:
               'Ensuring a unified experience across desktop, mobile web, iOS, and Android while adhering to TD’s design system and platform limitations.',
-            iconComponent: SparkleIcon,
-          },
-        ],
-      },
-      {
-        title: 'User personas',
-        users: [
-          {
-            name: 'Amelia',
-            title: 'The busy professional',
-            description: `32, Toronto, Marketing Manager. Highly familiar with digital tools but prefers quick, straightforward experiences. Sends monthly remittances to her family abroad.\n \u2B24 Goals: Understand fees and delivery timelines upfront. \u2B24 Pain Points: Worries about hidden fees and unclear exchange rates. \u2B24 Behavioral Insights: Prefers mobile apps for quick actions but switches to desktop for more complex tasks.`,
-            goals: 'Understand fees and delivery timelines upfront.',
-            painPoints: 'Worries about hidden fees and unclear exchange rates.',
-            behavioralInsights:
-              'Prefers mobile apps for quick actions but switches to desktop for more complex tasks.',
-            imgFile: tdGlobalUser1,
-          },
-          {
-            name: 'David',
-            title: 'The New User',
-            description:
-              '48. Lives in Ott`awa as a Small Business Owner. Minimal experience with online banking; primarily deals with local transfers. Recently began sending money to an international supplier.',
-            goals:
-              'Complete transfers confidently without worrying about security issues.',
-            painPoints:
-              'Finds too much information overwhelming and doesn’t know where to focus.',
-            behavioralInsights:
-              'Relies on visual cues like icons and progress bars and direct support channels for confidence.',
-            imgFile: tdGlobalUser2,
+            IconComponent: SparkleIcon,
           },
         ],
       },
