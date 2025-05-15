@@ -2,8 +2,6 @@ import React from 'react'
 import cn from '@/lib/utils/cn'
 import { CardItem } from '@/types/project'
 import Container from '@/components/Container'
-import ProcessStepHeader from '@/components/ProjectDetail/ProcessStepHeader'
-import TitleHeader from '@/components/ProjectDetail/TitleHeader'
 import IconWrapper from './IconWrapper'
 import FormattedDescription from './FormattedDescription'
 
@@ -34,14 +32,17 @@ export default function IconCardGrid({
       as="section"
       className={cn('px-4 pb-8 sm:px-8 sm:pb-12 md:p-16', className)}
     >
-      <ProcessStepHeader id={`${sectionTitle.toLowerCase()}-heading`}>
+      <h3
+        id={`${sectionTitle.toLowerCase()}-heading`}
+        className="text-design-process-header"
+      >
         {sectionTitle}
-      </ProcessStepHeader>
+      </h3>
 
       <div className="grid gap-16 sm:gap-[96px]">
         {sections.map(({ title, cards }) => (
           <div key={title}>
-            <TitleHeader className="mb-8 md:mb-16">{title}</TitleHeader>
+            <h4 className="text-title-header mb-8 md:mb-16">{title}</h4>
 
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-1 md:grid-cols-3">
               {cards.map(({ subheader, description, IconComponent }) => (
